@@ -1,0 +1,73 @@
+site_name: Hot Tub
+site_url: https://hottubapp.io
+theme:
+  name: material
+  custom_dir: overrides
+  logo: assets/icon.png
+  favicon: assets/favicon.png
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - toc.follow
+    - navigation.search
+    - navigation.sticky
+    # - navigation.tabs
+  font:
+    text: "IBM Plex"
+    header: 700
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: white
+      accent: white
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+markdown_extensions:
+  - meta
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - admonition
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+
+plugins:
+  - search
+  - mkdocs-pdf
+
+nav:
+  - 🏡 Home: index.md
+  - 📲 Install: install.md
+  - Developers:
+      - 📦 Server: developers/server.md
+      - 🌐 Endpoints:
+          - 📡 Status: developers/api/status.md
+          - 🎬 Videos: developers/api/videos.md
+          # - 📝 Subscription: developers/api/subscription.md
+          # - 📡 Channels: developers/api/channels.md
+  - About Us:
+      - ℹ️ Info: about/info.md
+      - 📰 Press Kit: about/press-kit.md
+
+extra_css:
+  - stylesheets/extra.css
