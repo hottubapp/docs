@@ -61,12 +61,12 @@ del.critic {
   border-radius: var(--base-border-radius);
 }
 
-[data-md-toggle='search']:checked ~ .md-header .md-search__form {
+[data-md-toggle="search"]:checked ~ .md-header .md-search__form {
   border-top-right-radius: var(--base-border-radius);
   border-top-left-radius: var(--base-border-radius);
 }
 
-[dir='ltr'] .md-search__output {
+[dir="ltr"] .md-search__output {
   border-bottom-right-radius: var(--base-border-radius);
   border-bottom-left-radius: var(--base-border-radius);
 }
@@ -112,7 +112,27 @@ del.critic {
 }
 
 /* Dark mode adjustments */
-[data-md-color-scheme='slate'] .grid.cards li {
+[data-md-color-scheme="slate"] .grid.cards li {
   background: var(--md-default-bg-color);
   border-color: var(--md-default-fg-color--lightest);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-links {
+  display: flex;
+  gap: 10px;
+}
+
+.social-link {
+  color: white; /* Ensure the links are visible */
+  text-decoration: none;
+}
+
+.social-link:hover {
+  color: #ccc; /* Optional: Change color on hover */
 }
