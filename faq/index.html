@@ -367,6 +367,42 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#altstore-specific" class="md-nav__link">
+    <span class="md-ellipsis">
+      AltStore Specific
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -684,6 +720,42 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#getting-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Getting Started
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#troubleshooting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Troubleshooting
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-questions" class="md-nav__link">
+    <span class="md-ellipsis">
+      General Questions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#altstore-specific" class="md-nav__link">
+    <span class="md-ellipsis">
+      AltStore Specific
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -705,15 +777,31 @@
 <div><h2 id="need-help-join-the-discord">Need Help? Join the Discord</h2>
 <p>If you have any questions or need assistance, feel free to join our Discord community! Connect with other users, share your experiences, and get help from our team.</p>
 <p><a href="https://hottubapp.io/discord">Join the Hot Tub Discord</a></p>
+<div class="admonition tip">
+<p class="admonition-title">Quick Search</p>
+</div>
+<p>Use your browser's search function (Cmd/Ctrl + F) to quickly find answers to your questions.</p>
+<h2 id="getting-started">Getting Started</h2>
 <details class="question">
 <summary>I don't see any videos</summary>
 <p>If you don't see any videos, it's likely because you don't have any sources added. You can add a source by tapping the "⚙️" button in the top left corner of the screen. This will open the settings menu. Navigate to the "Sources" section and enter the URL of the source you want to add.</p>
 <p>As of version 2.1.2, the app no longer automatically adds a source for you. You'll need to add a source manually.</p>
 <details class="info">
 <summary>Adding the Hot Tub Source</summary>
-<p>If you are 18 years or older, you can <a href="hottub://source?url=hottubapp.io">add the Hot Tub source</a> to browse adult content.</p>
+<p>If you are 18 years or older, you can add the Hot Tub source to browse adult content.</p>
+<p><a class="md-button" href="hottub://source?url=hottubapp.io"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M50.7 58.5 0 160h208V32H93.7c-18.2 0-34.8 10.3-43 26.5M240 160h208L397.3 58.5c-8.2-16.2-24.8-26.5-43-26.5H240zm208 32H0v224c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64z"></path></svg></span> Add the Hot Tub source</a></p>
 </details>
 </details>
+<h2 id="troubleshooting">Troubleshooting</h2>
+<details class="question">
+<summary>Videos Don't Load After Extracting</summary>
+<p>Try using a VPN. Some content might be geo-restricted or blocked by your ISP.</p>
+</details>
+<details class="question">
+<summary>How do I download in the highest quality?</summary>
+<p>The tool automatically attempts to download the highest quality available. If you're getting lower quality, the source might not provide higher quality options.</p>
+</details>
+<h2 id="general-questions">General Questions</h2>
 <details class="question">
 <summary>Why not just use [<em>insert website here</em>]?</summary>
 <p>Websites kinda suck.</p>
@@ -723,23 +811,11 @@ Anyway... You see where I'm coming from?
 I wanted to make a native iOS app that was clean, simple, and easy to use.</p>
 </details>
 <details class="question">
-<summary>Videos Don't Load After Extracting</summary>
-<p>Try using a VPN. Some content might be geo-restricted or blocked by your ISP.</p>
+<summary>Can you add [<em>insert website here</em>]?</summary>
+<p>You can request channels in <a href="https://hottubapp.io/discord">our discord</a>, either in the <code>#🌐-sites</code> channel, or by using <code>/submit site</code> slash command.</p>
+<p>We prioritize sites by number of requests, and while some sites we may be unable to add, the great thing about Hot Tub is that anyone can make a source and host it either for the community or themselves. Feel free to check out our server docs, you can <a href="/developers/server/">learn more here</a></p>
 </details>
-<details class="question">
-<summary>How do I download in the highest quality?</summary>
-<p>The tool automatically attempts to download the highest quality available. If you're getting lower quality, the source might not provide higher quality options.</p>
-</details>
-<details class="question">
-<summary>Error: AltServer could not be found</summary>
-<p>This means that AltStore is having trouble discovering AltServer on your local network. Make sure you're connected to the same WiFi network as your PC/Mac running AltServer, or try connecting your device to your computer via USB.</p>
-<ol>
-<li>Check for Altserver to be running</li>
-<li>(Mac) check for the mail plugin and if mail is running | (PC) check if you have iCloud/iTunes services running and Wi-Fi sync enabled(and installed from apple, not microsoft)</li>
-<li>Close altstore on iDevice and re-open it</li>
-<li>Connect via cable and try step 3</li>
-</ol>
-</details>
+<h2 id="altstore-specific">AltStore Specific</h2>
 <details class="question">
 <summary>What is AltStore and AltStore PAL?</summary>
 <p><strong>AltStore PAL</strong> is an official alternative app marketplace available only in the EU. With AltStore PAL you can install apps not available in the App Store, but without the limitations of AltStore (World).</p>
@@ -767,6 +843,16 @@ I wanted to make a native iOS app that was clean, simple, and easy to use.</p>
 <li>AltStore (World): <code>hottubapp.io/altstore</code></li>
 <li>AltStore PAL (EU): <code>hottubapp.io/altstore/pal</code></li>
 </ul>
+</details>
+<details class="question">
+<summary>Error: AltServer could not be found</summary>
+<p>This means that AltStore is having trouble discovering AltServer on your local network. Make sure you're connected to the same WiFi network as your PC/Mac running AltServer, or try connecting your device to your computer via USB.</p>
+<ol>
+<li>Check for Altserver to be running</li>
+<li>(Mac) check for the mail plugin and if mail is running | (PC) check if you have iCloud/iTunes services running and Wi-Fi sync enabled(and installed from apple, not microsoft)</li>
+<li>Close altstore on iDevice and re-open it</li>
+<li>Connect via cable and try step 3</li>
+</ol>
 </details>
 <details class="question">
 <summary>AltStore Error: Missing marketplaceID</summary>
