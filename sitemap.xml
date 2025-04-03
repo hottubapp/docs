@@ -2,58 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://docs.hottubapp.io/</loc>
-         <lastmod>2025-03-27</lastmod>
+         <lastmod>2025-04-03</lastmod>
     </url>
     <url>
          <loc>https://docs.hottubapp.io/advanced-settings/</loc>
-         <lastmod>2025-03-27</lastmod>
+         <lastmod>2025-04-03</lastmod>
     </url>
     <url>
          <loc>https://docs.hottubapp.io/faq/</loc>
-         <lastmod>2025-03-27</lastmod>
+         <lastmod>2025-04-03</lastmod>
     </url>
     <url>
          <loc>https://docs.hottubapp.io/install/</loc>
-         <lastmod>2025-03-27</lastmod>
-    </url>
-    <url>
-         <loc>https://docs.hottubapp.io/legal/</loc>
-         <lastmod>2025-03-27</lastmod>
+         <lastmod>2025-04-03</lastmod>
     </url>
     <url>
          <loc>https://docs.hottubapp.io/setup/</loc>
-         <lastmod>2025-03-27</lastmod>
+         <lastmod>2025-04-03</lastmod>
     </url>
     <url>
          <loc>https://docs.hottubapp.io/ytdlp/</loc>
-         <lastmod>2025-03-27</lastmod>
+         <lastmod>2025-04-03</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.hottubapp.io/about/contact/</loc>
+         <lastmod>2025-04-03</lastmod>
     </url>
     <url>
          <loc>https://docs.hottubapp.io/about/info/</loc>
-         <lastmod>2025-03-27</lastmod>
+         <lastmod>2025-04-03</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.hottubapp.io/about/legal/</loc>
+         <lastmod>2025-04-03</lastmod>
+    </url>
+    <url>
+         <loc>https://docs.hottubapp.io/about/partners/</loc>
+         <lastmod>2025-04-03</lastmod>
     </url>
     <url>
          <loc>https://docs.hottubapp.io/about/press-kit/</loc>
-         <lastmod>2025-03-27</lastmod>
+         <lastmod>2025-04-03</lastmod>
     </url>
     <url>
          <loc>https://docs.hottubapp.io/developers/server/</loc>
-         <lastmod>2025-03-27</lastmod>
+         <lastmod>2025-04-03</lastmod>
     </url>
     <url>
          <loc>https://docs.hottubapp.io/developers/api/auth/</loc>
-         <lastmod>2025-03-27</lastmod>
+         <lastmod>2025-04-03</lastmod>
     </url>
     <url>
          <loc>https://docs.hottubapp.io/developers/api/status/</loc>
-         <lastmod>2025-03-27</lastmod>
+         <lastmod>2025-04-03</lastmod>
     </url>
     <url>
          <loc>https://docs.hottubapp.io/developers/api/subscription/</loc>
-         <lastmod>2025-03-27</lastmod>
+         <lastmod>2025-04-03</lastmod>
     </url>
     <url>
          <loc>https://docs.hottubapp.io/developers/api/videos/</loc>
-         <lastmod>2025-03-27</lastmod>
+         <lastmod>2025-04-03</lastmod>
     </url>
 </urlset>
