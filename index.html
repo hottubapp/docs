@@ -808,14 +808,102 @@
 
 <div><h1 id="hot-tub"><strong>Hot Tub</strong></h1>
 <h2 id="video-player">📹 Video Player</h2>
-<div style="display: flex; justify-content: flex-start; flex-direction: row; align-items: flex-start;">
-  <div style="display: flex; flex-direction: column; align-items: flex-start;">
-    <p>
-    Hot Tub is a video player app, initially designed for the playback of adult content. Its API has been opened up for extensibility, allowing anyone to create, host, or deploy their own server, providing videos for playback within the app. This flexibility enables developers to integrate their own video sources and customize the user experience, making Hot Tub a versatile platform for video consumption.
-    </p>
+<style>
+  .two-column-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0rem;
+  }
+
+  .phone-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+  }
+
+  .text-container {
+    width: 100%;
+  }
+
+  /* Desktop layout */
+  @media (min-width: 768px) {
+    .two-column-container {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .phone-container {
+      margin: 0;
+      order: 2;
+      /* background: red; */
+      overflow: visible;
+      max-width: 30%;
+      max-height: 400px;
+      margin-top: -20%;
+    }
+
+    .text-container {
+      width: 60%;
+      padding-right: 2rem;
+      order: -1;
+    }
+
+    #demo-3d {
+      overflow: visible;
+      /* background: orange; */
+      width: 100%;
+      margin-left: 20%;
+      min-width: 600px;
+      min-height: 800px;
+      /* height: 100dvw; */
+
+    }
+  }
+
+@media (max-width: 768px) {
+  .phone-container {
+    min-width: 100%;
+    height: 50dvh;
+    padding: 0;
+    margin: 0;
+    overflow: visible;  /* Keep overflow visible on mobile */
+  }
+
+  #demo-3d {
+    /* transform: scale(1.3); */
+    height: 80dvh;
+  }
+}
+
+#demo-3d {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+  transform-origin: center center;
+  /* margin-right: 15%; */
+}
+
+</style>
+
+<!-- Content structure -->
+<div class="two-column-container">
+  <div class="phone-container">
+    <div id="demo-3d"></div>
   </div>
-  <img src="assets/screens/framed/home-left.png" alt="Hot Tub" style="width: 40%; margin-top: -20%">
+  <div class="text-container">
+    <p>Hot Tub is a video player app, initially designed for the playback of adult content. Its API has been opened up for extensibility, allowing anyone to create, host, or deploy their own server, providing videos for playback within the app. This flexibility enables developers to integrate their own video sources and customize the user experience, making Hot Tub a versatile platform for video consumption.</p>
+  </div>
 </div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    if (window.Demo3D) {
+      Demo3D.render('#demo-3d');
+    }
+  });
+</script>
 
 <h3 id="key-features">✨ Key Features</h3>
 <div class="feature-grid">
@@ -1072,6 +1160,16 @@
     
     
       <script src="assets/javascripts/bundle.f13b1293.min.js"></script>
+      
+        <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+      
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+      
+        <script src="https://unpkg.com/three@0.157.0/build/three.min.js"></script>
+      
+        <script src="assets/process-polyfill.js"></script>
+      
+        <script src="assets/demo-3d.bundle.js"></script>
       
     
   </body>
