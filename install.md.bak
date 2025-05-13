@@ -1,0 +1,63 @@
+---
+title: 📲 Install
+# hero:
+#   - assets/hero.jpg
+
+# hide:
+#   - toc
+#   - navigation
+
+# template: home.html
+---
+
+## Installing Hot Tub
+
+So you're ready to take a dip and get in the Hot Tub... Now what?
+
+Hot Tub isn't available on Apple's 1st party App Store. Instead, you'll need to install it through either a 3rd party app store / marketplace, or [manually install the .ipa](https://hottubapp.io/download) file on your device.
+
+### 📱 Alternative App Marketplaces
+
+If you’re based in the European Union, you can install apps from sources other than the App Store on your iPhone with iOS 17.4 or later, or your iPad with iPadOS 18 or later. [Learn More](https://support.apple.com/en-us/117767?cid=ot-ols-apps-article_117767-installation_message-02022024)
+
+??? info "<div style='display: flex; align-items: center;'><img src='/assets/brands/altstore.png' alt='AltStore Logo' width='32' style='margin-right: 8px;' /> AltStore PAL</div>"
+
+    If you're located within the European Union (EU), we recommend using [AltStore PAL](https://faq.altstore.io/altstore-pal/what-is-altstore-pal). AltStore PAL is an official alternative app marketplace available only in the EU. With AltStore PAL you can install apps not available in the App Store, but without the limitations of AltStore (World).
+
+    After installing AltStore PAL, you can install Hot Tub by [adding the source](https://hottubapp.io/altstore/pal) to AltStore PAL.
+
+---
+
+### 🪄 Signing Services
+
+Signing services offer a convenient method to install apps on your device without needing a computer. These services manage the signing of apps using enterprise certificates, enabling direct installation on your device. This process typically involves purchasing a signing certificate or subscription from the service provider.
+
+??? info "<div style='display: flex; align-items: center;'><img src='/assets/brands/flekstore.jpg' alt='Flekstore Logo' width='32' style='margin-right: 8px;' /> Flekstore</div>"
+
+    Flekstore is a 3rd party app store that is available on all devices. We have an affiliate link with them, where if you purchase a certificate we receive a portion of the proceeds.
+
+    You can add Flekstore to your device by going to [http://flekstore.com/HotTub](http://flekstore.com/HotTub). Once installed, you can add the (altstore compatible) source [https://hottubapp.io/altstore](https://hottubapp.io/altstore) to Flekstore.
+
+---
+
+### 💻 Side-Loading
+
+If you're not located within the EU, you can still install Hot Tub with a process known as "side-loading". Side loading refers to the process of using a computer to install apps on your device, without the need for an app store.
+
+??? info "<div style='display: flex; align-items: center;'><img src='/assets/brands/sidestore.png' alt='SideStore Logo' width='32' style='margin-right: 8px;' /> SideStore</div>"
+
+    SideStore is a community driven fork of AltStore (World), and has already implemented some of the community's most-requested features. You only need a computer once during installation. SideStore has some excellent resources to help get you started with guides for both [Windows](https://docs.sidestore.io/docs/getting-started/windows) & [macOS](https://docs.sidestore.io/docs/getting-started/mac). You can download the latest release of Hot Tub from our [downloads](https://hottubapp.io/download) page.
+
+    After installing SideStore, you can install Hot Tub by [adding the source](https://hottubapp.io/altstore) to SideStore.
+
+??? info "<div style='display: flex; align-items: center;'><img src='/assets/brands/altstore.png' alt='AltStore Logo' width='32' style='margin-right: 8px;' /> AltStore (World)</div>"
+
+    The AltStore team have assembled some excellent resources to help get you started with guides for both [Windows](https://faq.altstore.io/altstore-classic/how-to-install-altstore-windows) & [macOS](https://faq.altstore.io/altstore-classic/how-to-install-altstore-macos). You can download the latest release of Hot Tub from our [downloads](https://hottubapp.io/download) page.
+
+    After installing AltStore, you can install Hot Tub by [adding the source](https://hottubapp.io/altstore) to AltStore.
+
+??? info "<div style='display: flex; align-items: center;'><img src='/assets/brands/feather.png' alt='Feather Logo' width='32' style='margin-right: 8px;' /> Feather</div>"
+
+    Feather allows you to use an Apple Developer Account to sign and install applications on device without needing a computer on stock iOS versions, while allowing easy management with its applications.
+
+    After installing Feather, you can install Hot Tub by [adding the source](https://hottubapp.io/altstore) to Feather.
