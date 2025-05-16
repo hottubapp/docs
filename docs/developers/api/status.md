@@ -2,8 +2,6 @@
 title: :material-server: Status Endpoint
 ---
 
-# :material-server: Status Endpoint
-
 ## Overview
 
 The `POST /api/status` endpoint is used to retrieve the status of the given source. It contains information about the source, channels, and other relevant information.
@@ -12,15 +10,19 @@ The `POST /api/status` endpoint is used to retrieve the status of the given sour
 
 `POST /api/status`
 
-```
+```json
 {
-  "channel": "hottub",
+  "clientVersion": "2.1.2",
+  // The app will send your server's global options in the status request.
   "sort": "new",
-  "query": "kittens",
-  "page": 1,
-  "perPage": 10
+  "flavor": "mint chocolate chip"
 }
 ```
+
+!!! tip "Server Options"
+
+    Your server's options can be used to customize the experience for the user.
+    For example, you may return different categories, based on their preferences.
 
 ### Response
 
@@ -31,6 +33,7 @@ The `POST /api/status` endpoint is used to retrieve the status of the given sour
   "subtitle": "A better way to watch videos.",
   "description": "An elegant, native video player. Thoughtfully designed, ethically made, and free to use.",
   "iconUrl": "https://hottubapp.io/files/hottub/appicon.png",
+  "color": "#A700FF", // supports hex, or swift color names
   "status": "normal",
   // Notices are displayed to the user in the app on the lock screen. Priority notices are displayed on the home page as well.
   "notices": [
@@ -82,8 +85,8 @@ The `POST /api/status` endpoint is used to retrieve the status of the given sour
     "Drama",
     "Family"
   ],
+  // Global options for the source (applies to all channels)
   "options": [
-    // Global options for the source (applies to all channels)
     {
       "id": "sort",
       "title": "Sort",
@@ -100,6 +103,27 @@ The `POST /api/status` endpoint is used to retrieve the status of the given sour
           "id": "likes",
           "title": "Likes",
           "description": "Sort the videos by likes."
+        }
+      ]
+    },
+    {
+      "id": "flavor",
+      "title": "Flavor",
+      "description": "Your favorite flavor.",
+      "systemImage": "birthday.cake.fill",
+      "colorName": "pink",
+      "options": [
+        {
+          "id": "vanilla",
+          "title": "Vanilla"
+        }
+        {
+          "id": "mint chocolate chip",
+          "title": "Mint Chocolate Chip"
+        },
+        {
+          "id": "strawberry",
+          "title": "Strawberry"
         }
       ]
     }

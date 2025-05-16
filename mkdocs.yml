@@ -1,5 +1,5 @@
 site_name: Hot Tub
-site_url: https://hottubapp.io
+site_url: https://docs.hottubapp.io
 theme:
   name: material
   custom_dir: overrides
@@ -50,14 +50,23 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
 
 plugins:
   - search
   - mkdocs-pdf
+  - google-translate:
+      url: docs.hottubapp.io
 
 nav:
   - 🏡 Home: index.md
   - 📲 Install: install.md
+  - 🚀 Setup: setup.md
+  - 🪛 Settings: advanced-settings.md
+  - ❓ FAQ: faq.md
   - Developers:
       - 📦 Server: developers/server.md
       - 🌐 Endpoints:
@@ -67,7 +76,116 @@ nav:
           # - 📡 Channels: developers/api/channels.md
   - About Us:
       - ℹ️ Info: about/info.md
+      - 📇 Contact Us: about/contact.md
       - 📰 Press Kit: about/press-kit.md
+      - 📄 Terms & Privacy Policy: about/legal.md
+      - 🤝 Partner with Hot Tub: about/partners.md
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - https://unpkg.com/react@18/umd/react.production.min.js
+  - https://unpkg.com/react-dom@18/umd/react-dom.production.min.js
+  - https://unpkg.com/three@0.157.0/build/three.min.js # Add Three.js
+  - assets/process-polyfill.js
+  - assets/demo-3d.bundle.js
+
+extra:
+  alternate:
+    # Original Language
+    - name: English
+      lang: "en"
+      link: "%GT_RELATIVE_URL%"
+    # EU Member States
+    - name: French
+      lang: "fr"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=fr"
+    - name: German
+      lang: "de"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=de"
+    - name: Spanish
+      lang: "es"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=es"
+    - name: Italian
+      lang: "it"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=it"
+    - name: Dutch
+      lang: "nl"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=nl"
+    - name: Portuguese
+      lang: "pt"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=pt"
+    - name: Polish
+      lang: "pl"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=pl"
+    - name: Turkish
+      lang: "tr"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=tr"
+    - name: Chinese
+      lang: "zh"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=zh"
+    - name: Japanese
+      lang: "ja"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=ja"
+    # Additional EU Member States
+    - name: Austrian
+      lang: "at"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=de"
+    - name: Belgian
+      lang: "be"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=nl"
+    - name: Bulgarian
+      lang: "bg"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=bg"
+    - name: Croatian
+      lang: "hr"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=hr"
+    - name: Cypriot
+      lang: "cy"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=el"
+    - name: Czech
+      lang: "cs"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=cs"
+    - name: Danish
+      lang: "da"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=da"
+    - name: Estonian
+      lang: "et"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=et"
+    - name: Finnish
+      lang: "fi"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=fi"
+    - name: Greek
+      lang: "el"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=el"
+    - name: Hungarian
+      lang: "hu"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=hu"
+    - name: Irish
+      lang: "ga"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=ga"
+    - name: Latvian
+      lang: "lv"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=lv"
+    - name: Lithuanian
+      lang: "lt"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=lt"
+    - name: Luxembourgish
+      lang: "lb"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=lb"
+    - name: Maltese
+      lang: "mt"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=mt"
+    - name: Romanian
+      lang: "ro"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=ro"
+    - name: Slovak
+      lang: "sk"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=sk"
+    - name: Slovenian
+      lang: "sl"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=sl"
+    - name: Swedish
+      lang: "sv"
+      link: "https://translate.goog/?_x_tr_sl=en&_x_tr_tl=sv"

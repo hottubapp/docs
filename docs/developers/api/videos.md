@@ -2,24 +2,27 @@
 title: :material-server: Videos Endpoint
 ---
 
-# :material-movie: Videos Endpoint
-
 ## Overview
 
 The `POST /api/videos` endpoint is used to retrieve videos from the given source. It contains information about the videos, channels, and other relevant information.
 
 ### Request
 
-`POST /api/videos/popular`
-`POST /api/videos/search`
+`POST /api/videos`
 
-```
+!!! warning "Deprecation Notice"
+
+      The endpoints `/api/videos/popular` and `/api/videos/search` are deprecated and will be removed in future releases. Please migrate to `POST /api/videos`.
+
+```json
 {
   "channel": "youtube",
   "sort": "new",
   "query": "kittens",
   "page": 1,
-  "perPage": 10
+  "perPage": 10,
+  // Your server's global options will be sent in the videos request
+  "flavor": "mint chocolate chip"
 }
 ```
 
