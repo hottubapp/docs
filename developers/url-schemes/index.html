@@ -1,0 +1,2089 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.hottubapp.io/developers/url-schemes/">
+      
+      
+        <link rel="prev" href="../api/videos/">
+      
+      
+        <link rel="next" href="../../about/info/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.2">
+    
+    
+      
+        <title>🔗 URL Schemes - Hot Tub Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"IBM Plex";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-FKHVJYKHGB"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-FKHVJYKHGB",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-FKHVJYKHGB",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Hot Tub Docs" class="md-header__button md-logo" aria-label="Hot Tub Docs" data-md-component="logo">
+      
+  <img src="../../assets/icon.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hot Tub Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              🔗 URL Schemes
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../developers/url-schemes/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=fr" hreflang="fr" class="md-select__link">
+              French
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=de" hreflang="de" class="md-select__link">
+              German
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=es" hreflang="es" class="md-select__link">
+              Spanish
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=it" hreflang="it" class="md-select__link">
+              Italian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=nl" hreflang="nl" class="md-select__link">
+              Dutch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=pt" hreflang="pt" class="md-select__link">
+              Portuguese
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=pl" hreflang="pl" class="md-select__link">
+              Polish
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=tr" hreflang="tr" class="md-select__link">
+              Turkish
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=zh" hreflang="zh" class="md-select__link">
+              Chinese
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=ja" hreflang="ja" class="md-select__link">
+              Japanese
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=de" hreflang="at" class="md-select__link">
+              Austrian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=nl" hreflang="be" class="md-select__link">
+              Belgian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=bg" hreflang="bg" class="md-select__link">
+              Bulgarian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=hr" hreflang="hr" class="md-select__link">
+              Croatian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=el" hreflang="cy" class="md-select__link">
+              Cypriot
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=cs" hreflang="cs" class="md-select__link">
+              Czech
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=da" hreflang="da" class="md-select__link">
+              Danish
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=et" hreflang="et" class="md-select__link">
+              Estonian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=fi" hreflang="fi" class="md-select__link">
+              Finnish
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=el" hreflang="el" class="md-select__link">
+              Greek
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=hu" hreflang="hu" class="md-select__link">
+              Hungarian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=ga" hreflang="ga" class="md-select__link">
+              Irish
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=lv" hreflang="lv" class="md-select__link">
+              Latvian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=lt" hreflang="lt" class="md-select__link">
+              Lithuanian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=lb" hreflang="lb" class="md-select__link">
+              Luxembourgish
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=mt" hreflang="mt" class="md-select__link">
+              Maltese
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=ro" hreflang="ro" class="md-select__link">
+              Romanian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=sk" hreflang="sk" class="md-select__link">
+              Slovak
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=sl" hreflang="sl" class="md-select__link">
+              Slovenian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/url-schemes/?_x_tr_sl=en&_x_tr_tl=sv" hreflang="sv" class="md-select__link">
+              Swedish
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Hot Tub Docs" class="md-nav__button md-logo" aria-label="Hot Tub Docs" data-md-component="logo">
+      
+  <img src="../../assets/icon.png" alt="logo">
+
+    </a>
+    Hot Tub Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🏡 Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../install/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📲 Install
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🚀 Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../advanced-settings/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🪛 Settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../faq/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ❓ FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    Developers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Developers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../server/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📦 Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    🌐 Endpoints
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6_2">
+            <span class="md-nav__icon md-icon"></span>
+            🌐 Endpoints
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/status/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📡 Status
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../api/videos/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🎬 Videos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    🔗 URL Schemes
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    🔗 URL Schemes
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url-scheme-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      URL Scheme Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-url-schemes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available URL Schemes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Available URL Schemes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Add Source
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-web-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌎 Open Web Page
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trigger-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Trigger Search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#play-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      📺 Play Video
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-notification" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔔 Show Notification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠 Debug Message
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#field-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Field Reference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Field Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#source-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Source Scheme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webview-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌎 WebView Scheme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Search Scheme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#play-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      📺 Play Scheme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔔 Notification Scheme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug-message-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠 Debug Message Scheme
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Reference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Complete Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all-available-url-schemes" class="md-nav__link">
+    <span class="md-ellipsis">
+      All Available URL Schemes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-redirect-urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web Redirect URLs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javascript-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      JavaScript Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discordsocial-media-sharing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discord/Social Media Sharing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qr-code-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      QR Code Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-response-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Response Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  <span class="md-ellipsis">
+    About Us
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            About Us
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/info/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ℹ️ Info
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📇 Contact Us
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/press-kit/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📰 Press Kit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/legal/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    📄 Terms & Privacy Policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/partners/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    🤝 Partner with Hot Tub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#url-scheme-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      URL Scheme Format
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#available-url-schemes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Available URL Schemes
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Available URL Schemes">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#add-source" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Add Source
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#open-web-page" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌎 Open Web Page
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#trigger-search" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Trigger Search
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#play-video" class="md-nav__link">
+    <span class="md-ellipsis">
+      📺 Play Video
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#show-notification" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔔 Show Notification
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug-message" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠 Debug Message
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#field-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Field Reference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Field Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#source-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      📦 Source Scheme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#webview-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      🌎 WebView Scheme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#search-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔎 Search Scheme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#play-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      📺 Play Scheme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#notification-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      🔔 Notification Scheme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug-message-scheme" class="md-nav__link">
+    <span class="md-ellipsis">
+      🛠 Debug Message Scheme
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#complete-reference" class="md-nav__link">
+    <span class="md-ellipsis">
+      Complete Reference
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Complete Reference">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#all-available-url-schemes" class="md-nav__link">
+    <span class="md-ellipsis">
+      All Available URL Schemes
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parameter-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parameter Types
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#web-redirect-urls" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web Redirect URLs
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#implementation-examples" class="md-nav__link">
+    <span class="md-ellipsis">
+      Implementation Examples
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Implementation Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#html-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTML Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#javascript-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      JavaScript Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#discordsocial-media-sharing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Discord/Social Media Sharing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#qr-code-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      QR Code Integration
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#server-response-integration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Server Response Integration
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>🔗 URL Schemes</h1>
+
+<div><h2 id="overview">Overview</h2>
+<p>Hot Tub supports custom URL schemes that allow developers to integrate with the app and provide seamless user experiences. These URL schemes can be used in web pages, other apps, or server responses to trigger specific actions in Hot Tub.</p>
+<h2 id="url-scheme-format">URL Scheme Format</h2>
+<p>All Hot Tub URL schemes follow this format:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>hottub://[action]?[parameters]
+</code></pre></div>
+<h2 id="available-url-schemes">Available URL Schemes</h2>
+<h3 id="add-source">📦 Add Source</h3>
+<p>Direct users to add your video source to their Hot Tub app:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>hottub://source?url=https://api.example.com&amp;privacy=false
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Web Redirect Service</p>
+<p>For platforms that don't support custom URL schemes (like Discord), Hot Tub provides a web redirect service:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>https://hottubapp.io/add/{source_url}
+</code></pre></div>
+<p><strong>Example:</strong>
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>https://hottubapp.io/add/api.example.com
+</code></pre></div>
+<p>This automatically redirects to <code>hottub://source?url=https://api.example.com</code> when opened on devices with Hot Tub installed.</p>
+</div>
+<h3 id="open-web-page">🌎 Open Web Page</h3>
+<p>Open a web page within Hot Tub's built-in browser:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>hottub://webview?url=https://example.com/help&amp;privacy=true
+</code></pre></div>
+<h3 id="trigger-search">🔎 Trigger Search</h3>
+<p>Pre-fill the search field with a query:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>hottub://search?q=nature documentaries
+</code></pre></div>
+<h3 id="play-video">📺 Play Video</h3>
+<p>Direct playback of a specific video:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>hottub://play?video=https://example.com/watch/12345
+</code></pre></div>
+<h3 id="show-notification">🔔 Show Notification</h3>
+<p>Display an in-app toast notification:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>hottub://notification?type=info&amp;title=Welcome&amp;message=Thanks for using our service!
+</code></pre></div>
+<h3 id="debug-message">🛠 Debug Message</h3>
+<p>Show content in Hot Tub's debug view for troubleshooting and development:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>hottub://message?content=Configuration loaded: API v2.1, 15 channels active
+</code></pre></div>
+<hr>
+<h2 id="field-reference">Field Reference</h2>
+<h3 id="source-scheme">📦 Source Scheme</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>url</code></td>
+<td><code>string</code></td>
+<td>✅</td>
+<td>Your server's base URL</td>
+</tr>
+<tr>
+<td><code>privacy</code></td>
+<td><code>boolean</code></td>
+<td>⚪</td>
+<td>Whether to show privacy notice (default: true)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>hottub://source?url=https://api.myvideosite.com&amp;privacy=false
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Source Validation</p>
+<p>When adding a source, Hot Tub will ping your server's <code>/api/status</code> endpoint to validate it before adding.</p>
+</div>
+<hr>
+<h3 id="webview-scheme">🌎 WebView Scheme</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>url</code></td>
+<td><code>string</code></td>
+<td>✅</td>
+<td>The web page URL to open</td>
+</tr>
+<tr>
+<td><code>privacy</code></td>
+<td><code>boolean</code></td>
+<td>⚪</td>
+<td>Whether to use privacy mode (default: false)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>hottub://webview?url=https://help.example.com&amp;privacy=true
+</code></pre></div>
+<hr>
+<h3 id="search-scheme">🔎 Search Scheme</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>q</code></td>
+<td><code>string</code></td>
+<td>✅</td>
+<td>The search query</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Example:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>hottub://search?q=funny cats
+</code></pre></div>
+<hr>
+<h3 id="play-scheme">📺 Play Scheme</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>video</code></td>
+<td><code>string</code></td>
+<td>⚪ (Option 1)</td>
+<td>Video page URL (will fetch details via API)</td>
+</tr>
+<tr>
+<td><code>url</code></td>
+<td><code>string</code></td>
+<td>⚪ (Option 2)</td>
+<td>Web video player URL (opens in webview)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Play Options</p>
+<p>Use <code>video</code> for API-based videos that will fetch full details, or <code>url</code> for web-based video players (opens in webview).</p>
+</div>
+<p><strong>Examples:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a># Opens the video in a native video player
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>hottub://play?video=https://www.youtube.com/watch?v=y0sF5xhGreA
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a># Opens the video in a web view player
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>hottub://play?url=https://www.youtube.com/watch?v=y0sF5xhGreA
+</code></pre></div>
+<hr>
+<h3 id="notification-scheme">🔔 Notification Scheme</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>type</code></td>
+<td><code>string</code></td>
+<td>⚪</td>
+<td>Toast type ("info", "success", "warning", "error")</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td><code>string</code></td>
+<td>⚪</td>
+<td>Notification title</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td><code>string</code></td>
+<td>⚪</td>
+<td>Notification message</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Examples:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>hottub://notification?type=success&amp;title=Success&amp;message=Video added to playlist!
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>hottub://notification?type=error&amp;title=Error&amp;message=Failed to load video
+</code></pre></div>
+<hr>
+<h3 id="debug-message-scheme">🛠 Debug Message Scheme</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>content</code></td>
+<td><code>string</code></td>
+<td>✅</td>
+<td>Message text or URL to display in debug view</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Use Cases:</strong></p>
+<ul>
+<li><strong>Configuration info</strong> - Server settings, user preferences, app state</li>
+<li><strong>API responses</strong> - Raw JSON/data for debugging</li>
+<li><strong>URLs</strong> - Clickable links for testing endpoints</li>
+<li><strong>User data</strong> - Display user info for troubleshooting</li>
+<li><strong>App diagnostics</strong> - Version info, device details, etc.</li>
+</ul>
+<p><strong>Examples:</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>hottub://message?content=Server Status: API v2.1.3, 15 channels active, 1,203 users online
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>hottub://message?content=https://api.example.com/debug/user/12345
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>hottub://message?content=User Config: Premium=true, NSFW=false, Quality=1080p
+</code></pre></div>
+<hr>
+<h2 id="complete-reference">Complete Reference</h2>
+<h3 id="all-available-url-schemes">All Available URL Schemes</h3>
+<table>
+<thead>
+<tr>
+<th>Scheme</th>
+<th>Purpose</th>
+<th>Required Parameters</th>
+<th>Optional Parameters</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hottub://source</code></td>
+<td>Add video source</td>
+<td><code>url</code></td>
+<td><code>privacy</code></td>
+</tr>
+<tr>
+<td><code>hottub://webview</code></td>
+<td>Open web page</td>
+<td><code>url</code></td>
+<td><code>privacy</code></td>
+</tr>
+<tr>
+<td><code>hottub://search</code></td>
+<td>Trigger search</td>
+<td><code>q</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>hottub://play</code></td>
+<td>Play video</td>
+<td><code>video</code> OR <code>url</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>hottub://notification</code></td>
+<td>Show in-app alert</td>
+<td>-</td>
+<td><code>type</code>, <code>title</code>, <code>message</code></td>
+</tr>
+<tr>
+<td><code>hottub://message</code></td>
+<td>Show debug content</td>
+<td><code>content</code></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parameter-types">Parameter Types</h3>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Values</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>url</code></td>
+<td><code>string</code></td>
+<td>Valid URL</td>
+<td>Web address (auto-adds https:// if missing)</td>
+</tr>
+<tr>
+<td><code>privacy</code></td>
+<td><code>boolean</code></td>
+<td><code>true</code>, <code>false</code></td>
+<td>Shows Hot Tub's lock screen if <code>true</code></td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td><code>string</code></td>
+<td><code>info</code>, <code>success</code>, <code>warning</code>, <code>error</code></td>
+<td>Toast notification style</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td><code>string</code></td>
+<td>Any text</td>
+<td>Notification title</td>
+</tr>
+<tr>
+<td><code>message</code></td>
+<td><code>string</code></td>
+<td>Any text</td>
+<td>Notification message</td>
+</tr>
+<tr>
+<td><code>content</code></td>
+<td><code>string</code></td>
+<td>Text or URL</td>
+<td>Content to display in debug view</td>
+</tr>
+<tr>
+<td><code>q</code></td>
+<td><code>string</code></td>
+<td>Any text</td>
+<td>Search query</td>
+</tr>
+<tr>
+<td><code>video</code></td>
+<td><code>string</code></td>
+<td>Valid URL</td>
+<td>Video page URL for API fetching</td>
+</tr>
+</tbody>
+</table>
+<h3 id="web-redirect-urls">Web Redirect URLs</h3>
+<table>
+<thead>
+<tr>
+<th>URL Format</th>
+<th>Equivalent URL Scheme</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>hottubapp.io/add/{domain}</code></td>
+<td><code>hottub://source?url=https://{domain}</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="implementation-examples">Implementation Examples</h2>
+<h3 id="html-integration">HTML Integration</h3>
+<p>Add Hot Tub support to your website:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="cm">&lt;!-- Custom URL Scheme (works on devices with Hot Tub) --&gt;</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"hottub://source?url=https://api.myvideosite.com"</span> <span class="na">class</span><span class="o">=</span><span class="s">"add-to-hottub-btn"</span><span class="p">&gt;</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>  📺 Add to Hot Tub
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a><span class="cm">&lt;!-- Web Redirect (works everywhere, including Discord) --&gt;</span>
+<a id="__codelineno-15-7" name="__codelineno-15-7" href="#__codelineno-15-7"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://hottubapp.io/add/api.myvideosite.com"</span> <span class="na">class</span><span class="o">=</span><span class="s">"add-to-hottub-btn-web"</span><span class="p">&gt;</span>
+<a id="__codelineno-15-8" name="__codelineno-15-8" href="#__codelineno-15-8"></a>  📺 Add to Hot Tub
+<a id="__codelineno-15-9" name="__codelineno-15-9" href="#__codelineno-15-9"></a><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="__codelineno-15-10" name="__codelineno-15-10" href="#__codelineno-15-10"></a>
+<a id="__codelineno-15-11" name="__codelineno-15-11" href="#__codelineno-15-11"></a><span class="cm">&lt;!-- Play video --&gt;</span>
+<a id="__codelineno-15-12" name="__codelineno-15-12" href="#__codelineno-15-12"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"hottub://play?video=https://mysite.com/video/123"</span><span class="p">&gt;</span> ▶️ Watch in Hot Tub <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="__codelineno-15-13" name="__codelineno-15-13" href="#__codelineno-15-13"></a>
+<a id="__codelineno-15-14" name="__codelineno-15-14" href="#__codelineno-15-14"></a><span class="cm">&lt;!-- Debug info for developers --&gt;</span>
+<a id="__codelineno-15-15" name="__codelineno-15-15" href="#__codelineno-15-15"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"hottub://message?content=API Response: 200 OK, 15 videos returned"</span><span class="p">&gt;</span> 🛠 Debug Info <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</code></pre></div>
+<h3 id="javascript-integration">JavaScript Integration</h3>
+<p>Trigger different URL schemes from web pages:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="c1">// Show success notification</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="kd">function</span><span class="w"> </span><span class="nx">showNotification</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span><span class="w"> </span><span class="nx">title</span><span class="p">,</span><span class="w"> </span><span class="nx">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`hottub://notification?type=</span><span class="si">${</span><span class="nx">type</span><span class="si">}</span><span class="sb">&amp;title=</span><span class="si">${</span><span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">title</span><span class="p">)</span><span class="si">}</span><span class="sb">&amp;message=</span><span class="si">${</span><span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">url</span><span class="p">;</span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="p">}</span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="c1">// Show debug information</span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="kd">function</span><span class="w"> </span><span class="nx">showDebugInfo</span><span class="p">(</span><span class="nx">info</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"hottub://message?content="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">info</span><span class="p">);</span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">url</span><span class="p">;</span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="p">}</span>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="c1">// Example usage</span>
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="nx">showNotification</span><span class="p">(</span><span class="s2">"success"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Success"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Video added to playlist!"</span><span class="p">);</span>
+<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="nx">showDebugInfo</span><span class="p">(</span><span class="s2">"API Status: Connected, Last sync: 2 minutes ago"</span><span class="p">);</span>
+</code></pre></div>
+<h3 id="discordsocial-media-sharing">Discord/Social Media Sharing</h3>
+<p>Use web redirects for platforms that don't support custom schemes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Share this link: https://hottubapp.io/add/api.myvideosite.com
+</code></pre></div>
+<h3 id="qr-code-integration">QR Code Integration</h3>
+<p>Generate QR codes for easy mobile access:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>hottub://source?url=https://api.myvideosite.com
+</code></pre></div>
+<h3 id="server-response-integration">Server Response Integration</h3>
+<p>Include URL schemes in your API responses:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="p">{</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">  </span><span class="nt">"notices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">      </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"info"</span><span class="p">,</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">      </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Need Help?"</span><span class="p">,</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">      </span><span class="nt">"details"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visit our help center for assistance."</span><span class="p">,</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">      </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hottub://webview?url=https://help.example.com"</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="w">      </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="w">      </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Debug Available"</span><span class="p">,</span>
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="w">      </span><span class="nt">"details"</span><span class="p">:</span><span class="w"> </span><span class="s2">"View server configuration details."</span><span class="p">,</span>
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="w">      </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hottub://message?content=Server: api.example.com, Version: 2.1.3, Channels: 15"</span>
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a><span class="p">}</span>
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Best Practices</p>
+<ul>
+<li>Use web redirects (<code>hottubapp.io/add/</code>) for Discord and social media</li>
+<li>Use direct URL schemes (<code>hottub://</code>) for native apps and websites</li>
+<li>Always URL-encode your parameters, especially for notification messages</li>
+<li>Use appropriate notification types (<code>success</code>, <code>error</code>, <code>warning</code>, <code>info</code>) for better UX</li>
+<li>Use debug messages for development/troubleshooting, not end-user content</li>
+<li>Provide fallback web links for users who don't have Hot Tub installed</li>
+<li>Test URL schemes on both iOS and macOS if supporting both platforms</li>
+</ul>
+</div></div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              Thanks for your feedback! Help us improve this page by
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
+<footer class="site-footer" style="background-color: rgba(0, 0, 0, 0.5); width: 100%">
+  <div
+    class="footer-content"
+    style="
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    "
+  >
+    <div
+      class="footer-brand"
+      style="display: flex; flex-direction: row; align-items: center; gap: 10px"
+    >
+      <a href="https://reddoorendeavors.com">
+        <img
+          src="https://docs.hottubapp.io/assets/logo.png"
+          alt="Red Door Endeavors"
+          style="height: 50px; padding-top: 10px; padding-bottom: 10px"
+        />
+      </a>
+      <div class="footer-copyright">© 2024 Red Door Endeavors, Inc. All rights reserved.</div>
+    </div>
+    <div class="footer-nav">
+      <!-- Uncomment the following lines to display the links -->
+      <!-- <a href="https://docs.hottubapp.io/products">Products</a>
+      <a href="https://docs.hottubapp.io/about">About</a>
+      <a href="https://docs.hottubapp.io/contact">Contact</a> -->
+      <div class="social-links" style="display: flex; gap: 12px">
+        <a href="https://github.com/hottubapp" class="social-link">
+          <i class="fa-brands fa-github" style="color: white; font-size: 20px"></i>
+        </a>
+        <a href="https://hottubapp.io/discord" class="social-link">
+          <i class="fab fa-discord" style="color: white; font-size: 20px"></i>
+        </a>
+        <a href="mailto:support@hottubapp.io" class="social-link">
+          <i class="fas fa-envelope" style="color: white; font-size: 20px"></i>
+        </a>
+        <a href="https://patreon.com/c1d3rdev" class="social-link">
+          <i class="fa-brands fa-patreon" style="color: white; font-size: 20px"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "toc.follow", "navigation.search", "navigation.sticky"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f13b1293.min.js"></script>
+      
+        <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+      
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+      
+        <script src="https://unpkg.com/three@0.157.0/build/three.min.js"></script>
+      
+        <script src="../../assets/process-polyfill.js"></script>
+      
+        <script src="../../assets/demo-3d.bundle.js"></script>
+      
+    
+  </body>
+</html>
