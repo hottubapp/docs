@@ -1519,7 +1519,8 @@
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Web Redirect Service</p>
-<p>For platforms that don't support custom URL schemes (like Discord), Hot Tub provides a web redirect service:</p>
+<p>For platforms that don't support custom URL schemes, Hot Tub provides a web redirect service.
+Use the web redirect service for sharing in Discord, Slack, or other platforms that block custom URL schemes.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>https://hottubapp.io/add/{source_url}
 </code></pre></div>
 <p><strong>Example:</strong>
@@ -1938,8 +1939,6 @@
 <li>Always URL-encode your parameters, especially for notification messages</li>
 <li>Use appropriate notification types (<code>success</code>, <code>error</code>, <code>warning</code>, <code>info</code>) for better UX</li>
 <li>Use debug messages for development/troubleshooting, not end-user content</li>
-<li>Provide fallback web links for users who don't have Hot Tub installed</li>
-<li>Test URL schemes on both iOS and macOS if supporting both platforms</li>
 </ul>
 </div></div>
 
