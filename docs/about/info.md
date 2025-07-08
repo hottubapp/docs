@@ -7,36 +7,45 @@ title: Info
 > ### _Hot Tub_
 >
 > _/ˈhät ˌtəb/_<br>_noun_<br>
-> a large tub filled with hot aerated water used for recreation or physical therapy.
+> A large tub filled with hot, bubbling water—used for relaxing, connecting, and letting go.
 
 ## What is Hot Tub?
 
-Hot Tub is the first Apple-notarized adult-video streaming app native to iOS. We set out to build the best viewing experience there is. When it comes to consuming content, Hot Tub is a breath of fresh air: free of intrusive ads, annoying pop-ups, redirect rabbit-holes, and sketchy data-brokers harvesting your data. With no account account needed, you can watch in private, securely save your favorite videos, frequent searches, and watch history, all saved locally on your device.
+Hot Tub is the first Apple-notarized adult video app built _natively_ for iOS.
+
+It’s designed to give you a clean, private way to explore adult content on your terms.
+No account required. Favorites, search history, and watch progress all stay on your device—never in the cloud, never sold.
+
+Whether you're watching casually or curating your go-to favorites, Hot Tub makes it easy to explore without the usual friction or noise.
 
 ## Why Hot Tub?
 
-We designed Hot Tub to put you in the driver seat— or rather, next to the jets— empowering you to fully customize your experience. Looking for a more private experience? You can disable (or even just hide) favorites and/or watch history. We put privacy & security at the forefront when designing the app. Open Hot Tub and you'll see privacy screen, with options to require FaceID / TouchID / passcode to unlock the app.
-
-Hot Tub is also extensible, utilizing a concept of _"sources"_. A _source_ is a dedicated server from which the app can retrieve videos from. We've published our API (application programming interface) specifications, along with developer packages and documentation, so anyone can create a source which can be added to Hot Tub. Each source can contain multiple _"channels"_. A _channel_ is a dedicated group where videos are loaded from.
+Hot Tub puts you in control. From privacy settings to interface preferences, everything is built to let you customize your experience.
+Want extra discretion? You can hide or disable favorites, watch history, choose a more subtle icon, and even lock the app with FaceID, TouchID, or a passcode.
+Hot Tub is also built to grow with you. The app supports "sources"—independent servers that provide content to the app—and "channels," which organize videos by category, theme, or provider. Anyone can build their own source using our open API and developer tools.
 
 ## Features & Benefits
 
-- **Privacy First**: All data stays on your device - no accounts, no tracking, no data collection
-- **Apple Notarized**: Verified by Apple for security and reliability
-- **Customizable Experience**: Control your privacy settings, manage favorites, and organize your content
-- **Extensible Platform**: Add custom sources and channels to expand your content library
-- **Clean Interface**: No ads, pop-ups, or unwanted redirects
-- **Security Options**: Protect your content with FaceID, TouchID, or passcode authentication
-- **Inclusive**: Set your preferences and browse content tailor to your specific interests & identity
-- **iOS Native**: Built specifically for Apple devices, ensuring optimal performance
-- **No Account Needed**: Save your favorites and watch history without having to create an account
+- **Privacy-First Design**: No accounts required. Data stays on your device.
+- **Apple Notarized**: Reviewed and approved for security and reliability.
+- **Privacy Controls**: Show or hide history, favorites, and more — plus get notified before audio plays through Bluetooth or AirPlay.
+- **Optional App Lock**: Use FaceID, TouchID, or a passcode to keep things private.
+- **Extensible Platform**: Add new sources and channels to expand your library.
+- **Built for iOS**: Native performance with intuitive gestures and seamless playback.
+- **Clean Interface**: Minimal design—no clutter, just the content you care about.
+- **No Account Needed**: Watch privately without ever signing up.
+- **Customizable Experience**: Organize favorites, adjust layout, and set preferences your way.
+- **Inclusive & Respectful**: Content that reflects your tastes—without assumptions.
+- **Developer-Friendly**: Open API and docs for building your own sources.
 
 ## Getting Started
 
-Ready to dive in? Download Hot Tub and start exploring. Check out our [Install Guide](/install) to learn more about how to get started.
+Download Hot Tub and start exploring—quick setup, no sign up.
+Check out our [Install Guide](/install) to learn more about how to get started.
 
-For developers interested in creating custom sources, visit our [Developer Documentation](/developers) to learn about our API specifications and integration process.
+Developers: Check out our [Developer Docs](/developers) or [Join the Discord](https://hottubapp.io/discord) to learn more about building and hosting your own sources and channels.
 
 ## Support
 
-Have questions or need assistance? Visit our [Support Center](/faq) or reach out to our team through the app's feedback feature. We're committed to providing the best possible experience for our users.
+Have a question or need help? Visit the **[Support Center](/faq)** or use the in-app feedback feature.
+We’re here to make sure Hot Tub stays smooth, private, and easy to use.

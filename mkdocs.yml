@@ -74,6 +74,7 @@ nav:
           - 🎬 Videos: developers/api/videos.md
           # - 📝 Subscription: developers/api/subscription.md
           # - 📡 Channels: developers/api/channels.md
+      - 🔗 URL Schemes: developers/url-schemes.md
   - About Us:
       - ℹ️ Info: about/info.md
       - 📇 Contact Us: about/contact.md

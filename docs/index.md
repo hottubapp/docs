@@ -163,9 +163,9 @@ title: Hot Tub
   </div>
   
   <div class="feature-card">
-    <div class="feature-icon">🚫</div>
-    <div class="feature-title">Ad-free</div>
-    <div class="feature-description">No interruptions or popups</div>
+    <div class="feature-icon">⚡</div>
+    <div class="feature-title">Native performance</div>
+    <div class="feature-description">Faster than web browsers</div>
   </div>
   
   <div class="feature-card">

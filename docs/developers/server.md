@@ -14,17 +14,13 @@ We've published a typescript package on [NPM](https://www.npmjs.com/package/@hot
 |
 |—— videos (POST)
 |
-|—— subscription (POST)
-|
 |—— channels (POST)
-|
-|—— auth (POST)
 
 ```
 
 ## URL Scheme
 
-Hot Tub supports a custom URL scheme so users can easily add your source to the app at the tap of a button.
+Hot Tub supports a custom URL scheme so users can easily add your source to the app at the tap of a button. [Learn more about url schemes]("/url-schemes")
 
 ```
 hottub://source?url=[source url]
