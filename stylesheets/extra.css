@@ -1,5 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,600&display=swap');
+
 :root {
   --base-border-radius: 0.5rem;
+}
+
+/* Apply Playfair Display to all headers */
+h1, h2, h3, h4, h5, h6,
+.md-typeset h1,
+.md-typeset h2,
+.md-typeset h3,
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+  font-family: 'Playfair Display', serif !important;
+}
+
+/* Only h1 is bold and italic */
+h1,
+.md-typeset h1 {
+  font-weight: 600 !important;
+  font-style: italic !important;
 }
 
 .highlight span.filename {
