@@ -4,7 +4,9 @@
   --base-border-radius: 0.5rem;
 }
 
-/* Apply Playfair Display to all headers */
+/* Apply Playfair Display to site title and all headers */
+.md-header__title,
+.md-header__topic,
 h1, h2, h3, h4, h5, h6,
 .md-typeset h1,
 .md-typeset h2,
@@ -13,6 +15,12 @@ h1, h2, h3, h4, h5, h6,
 .md-typeset h5,
 .md-typeset h6 {
   font-family: 'Playfair Display', serif !important;
+}
+
+/* Site title styling */
+.md-header__title {
+  font-weight: 600 !important;
+  font-style: italic !important;
 }
 
 /* Only h1 is bold and italic */
