@@ -4,6 +4,52 @@
   --base-border-radius: 0.5rem;
 }
 
+/* Custom background color */
+body {
+  background-color: #191919 !important;
+}
+
+.md-container {
+  background-color: #191919 !important;
+}
+
+.md-main {
+  background-color: #191919 !important;
+}
+
+.md-content {
+  background-color: #191919 !important;
+}
+
+/* Bubble background styling */
+#bubble-background {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  z-index: -1 !important;
+  pointer-events: none !important;
+  background-color: #191919 !important;
+}
+
+/* Ensure content is above the bubble background */
+.md-container,
+.md-header,
+.md-main,
+.md-content,
+.md-sidebar,
+.md-footer {
+  position: relative !important;
+  z-index: 1 !important;
+  background-color: transparent !important;
+}
+
+/* Make sure the main content area is transparent to show background */
+.md-main__inner {
+  background-color: transparent !important;
+}
+
 /* Apply Playfair Display to site title and all headers */
 .md-header__title,
 .md-header__topic,
