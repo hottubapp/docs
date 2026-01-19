@@ -40,7 +40,7 @@ body {
 .md-content,
 .md-sidebar,
 .md-footer {
-  position: relative !important;
+  /* position: relative !important; */
   z-index: 1 !important;
   background-color: transparent !important;
 }
