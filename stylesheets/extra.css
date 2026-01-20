@@ -35,13 +35,11 @@ body {
 
 /* Ensure content is above the bubble background */
 .md-container,
-.md-header,
 .md-main,
 .md-content,
-.md-sidebar,
 .md-footer {
   /* position: relative !important; */
-  z-index: 1 !important;
+  /* z-index: 1 !important; */
   background-color: transparent !important;
 }
 
