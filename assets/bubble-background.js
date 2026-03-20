@@ -41,7 +41,6 @@ class BubbleBackground {
   }
 
   createCanvas() {
-    // Create canvas element
     this.canvas = document.createElement('canvas');
     this.canvas.style.cssText = `
       position: fixed;
@@ -50,11 +49,9 @@ class BubbleBackground {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background-color: #191919;
       pointer-events: none;
     `;
 
-    // Insert canvas at the beginning of the container
     this.container.insertBefore(this.canvas, this.container.firstChild);
 
     this.ctx = this.canvas.getContext('2d');
@@ -87,10 +84,16 @@ class BubbleBackground {
     }
   }
 
+  isDarkMode() {
+    return document.body.getAttribute('data-md-color-scheme') === 'slate';
+  }
+
   animate() {
     if (!this.isRunning) return;
 
     this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+    this.ctx.fillStyle = this.isDarkMode() ? '#191919' : '#ffffff';
+    this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
     this.bubbles.forEach((bubble, index) => {
       if (bubble.update()) {
@@ -236,7 +239,6 @@ document.addEventListener('DOMContentLoaded', function() {
   let container = document.getElementById('bubble-background');
   
   if (!container) {
-    // Create a background container
     container = document.createElement('div');
     container.id = 'bubble-background';
     container.style.cssText = `
@@ -246,24 +248,23 @@ document.addEventListener('DOMContentLoaded', function() {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background-color: #191919;
     `;
     document.body.insertBefore(container, document.body.firstChild);
   }
 
-  // Wait a bit for the page to fully load
+  const isDark = document.body.getAttribute('data-md-color-scheme') === 'slate';
+
   setTimeout(() => {
-    console.log('Initializing bubble background');
     try {
-      // Initialize the bubble background
       window.bubbleBackground = new BubbleBackground('bubble-background', {
-        colors: ["#FFFFFF", "#A700FF", "#00E1A3"],
-        bubbleCount: 20, // Reduced for docs site
+        colors: isDark
+          ? ["#FFFFFF", "#A700FF", "#00E1A3"]
+          : ["#A700FF", "#00E1A3", "#5B6BF5"],
+        bubbleCount: 20,
         baseSpeed: 1.5,
-        opacity: 0.6, // Increased opacity for visibility
+        opacity: isDark ? 0.6 : 0.4,
         popChance: 0.2
       });
-      console.log('Bubble background initialized successfully');
     } catch (error) {
       console.error('Error initializing bubble background:', error);
     }

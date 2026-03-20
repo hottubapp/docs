@@ -502,6 +502,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#get-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get started
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#key-features" class="md-nav__link">
     <span class="md-ellipsis">
       ✨ Key Features
@@ -1085,6 +1094,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#get-started" class="md-nav__link">
+    <span class="md-ellipsis">
+      Get started
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#key-features" class="md-nav__link">
     <span class="md-ellipsis">
       ✨ Key Features
@@ -1129,10 +1147,13 @@
     justify-content: center;
     align-items: center;
     overflow: visible;
+    pointer-events: none;
   }
 
   .text-container {
     width: 100%;
+    position: relative;
+    z-index: 1;
   }
 
   /* Desktop layout */
@@ -1142,14 +1163,17 @@
       align-items: center;
     }
 
+    .two-column-container {
+      position: relative;
+      z-index: 0;
+    }
+
     .phone-container {
       margin: 0;
       order: 2;
-      /* background: red; */
       overflow: visible;
       max-width: 30%;
       max-height: 200px;
-      /* margin-top: -10%; */
     }
 
     .text-container {
@@ -1160,13 +1184,10 @@
 
     #demo-3d {
       overflow: visible;
-      /* background: orange; */
       width: 100%;
       margin-left: 20%;
       min-width: 600px;
       min-height: 800px;
-      /* height: 100dvw; */
-
     }
   }
 
@@ -1190,6 +1211,7 @@
   width: 100%;
   aspect-ratio: 1/1;
   transform-origin: center center;
+  pointer-events: none;
   /* margin-right: 15%; */
 }
 
@@ -1213,6 +1235,28 @@
   });
 </script>
 
+<blockquote>
+<p>“For the first time, pornography apps are available on iPhone [...] That includes Hot Tub, a pornography app that was announced by AltStore earlier this year.”</p>
+<p>— <a href="https://www.apple.com/newsroom/2025/09/the-digital-markets-acts-impacts-on-eu-users/">Apple Newsroom — The Digital Markets Act’s impacts on EU users</a></p>
+</blockquote>
+<h3 id="get-started">Get started</h3>
+<div class="grid cards">
+<ul>
+<li>
+<p><a href="install/"><span class="card-emoji">📲</span> <strong>Install Hot Tub</strong><br>
+  Follow the instructions to install Hot Tub on your device.</a></p>
+</li>
+<li>
+<p><a href="faq/"><span class="card-emoji">❓</span> <strong>FAQ / Troubleshooting</strong><br>
+  Find answers to common questions and troubleshooting tips.</a></p>
+</li>
+<li>
+<p><a href="developers/server/"><span class="card-emoji">🖥️</span> <strong>Deploy a Server</strong><br>
+  Learn how to deploy your own server for Hot Tub.</a></p>
+</li>
+</ul>
+</div>
+<hr>
 <h3 id="key-features">✨ Key Features</h3>
 <div class="feature-grid">
   <div class="feature-card">
@@ -1282,99 +1326,41 @@
   </div>
 </div>
 
-<hr>
-<div class="grid cards">
-<ul>
-<li>
-<p><a href="install/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 32c0-17.7-14.3-32-32-32s-32 14.3-32 32v210.7l-41.4-41.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l96 96c12.5 12.5 32.8 12.5 45.3 0l96-96c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 242.7zM64 320c-35.3 0-64 28.7-64 64v32c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64v-32c0-35.3-28.7-64-64-64h-46.9l-56.6 56.6c-31.2 31.2-81.9 31.2-113.1 0L110.9 320zm304 56a24 24 0 1 1 0 48 24 24 0 1 1 0-48"></path></svg></span> <strong>Install Hot Tub</strong><br>
-  Follow the instructions to install Hot Tub on your device.</a></p>
-</li>
-<li>
-<p><a href="developers/server/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 32C28.7 32 0 60.7 0 96v64c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm216 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48m56 24a24 24 0 1 1 48 0 24 24 0 1 1-48 0M64 288c-35.3 0-64 28.7-64 64v64c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64v-64c0-35.3-28.7-64-64-64zm216 72a24 24 0 1 1 0 48 24 24 0 1 1 0-48m56 24a24 24 0 1 1 48 0 24 24 0 1 1-48 0"></path></svg></span> <strong>Deploy a Server</strong><br>
-  Learn how to deploy your own server for Hot Tub.</a></p>
-</li>
-<li>
-<p><a href="faq/"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 320 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M64 160c0-53 43-96 96-96s96 43 96 96c0 42.7-27.9 78.9-66.5 91.4-28.4 9.2-61.5 35.3-61.5 76.6v24c0 17.7 14.3 32 32 32s32-14.3 32-32v-24c0-1.7.6-4.1 3.5-7.3 3-3.3 7.9-6.5 13.7-8.4C273.5 291.6 320 231.3 320 160 320 71.6 248.4 0 160 0S0 71.6 0 160c0 17.7 14.3 32 32 32s32-14.3 32-32m96 352c22.1 0 40-17.9 40-40s-17.9-40-40-40-40 17.9-40 40 17.9 40 40 40"></path></svg></span> <strong>FAQ / Troubleshooting</strong><br>
-  Find answers to common questions and troubleshooting tips.</a></p>
-</li>
-</ul>
-</div>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const cards = document.querySelectorAll('.feature-card');
-
-    // Add shimmer overlay to each card
-    cards.forEach(card => {
-      const shimmerOverlay = document.createElement('div');
-      shimmerOverlay.className = 'shimmer-overlay';
-      card.appendChild(shimmerOverlay);
-
-      // Track if mouse is over the card
-      let isMouseOver = false;
-
-      // Add smooth transition on mouse enter
+(function() {
+  function init() {
+    document.querySelectorAll('.feature-card:not([data-card-inited])').forEach(function(card) {
+      card.setAttribute('data-card-inited', 'true');
+      var s = document.createElement('div');
+      s.className = 'shimmer-overlay';
+      card.appendChild(s);
+      var over = false;
       card.addEventListener('mouseenter', function(e) {
-        isMouseOver = true;
-
-        // Keep the transition for the initial movement
-        this.style.transition = 'transform 0.3s ease-out, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease';
-
-        // Calculate initial rotation based on entry point
-        const rect = this.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        // Calculate rotation (from -10 to 10 degrees) - ATTRACTING to mouse
-        const rotateY = -((x / rect.width) - 0.5) * 20; // Inverted for attraction
-        const rotateX = ((y / rect.height) - 0.5) * 20; // No negative multiplier
-
-        // Apply the initial rotation with transition
-        this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-
-        // After the initial transition, remove it for responsive movement
-        setTimeout(() => {
-          if (isMouseOver) {
-            this.style.transition = 'box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease';
-          }
-        }, 300);
+        over = true;
+        this.style.transition = 'transform 0.15s ease-out, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease';
+        var r = this.getBoundingClientRect();
+        this.style.transform = 'perspective(1000px) rotateX(' + ((e.clientY - r.top) / r.height - 0.5) * 20 + 'deg) rotateY(' + -((e.clientX - r.left) / r.width - 0.5) * 20 + 'deg)';
       });
-
-      // 3D rotation effect - follows mouse
       card.addEventListener('mousemove', function(e) {
-        // Only respond to mousemove after the initial transition
-        if (!isMouseOver) return;
-
-        const rect = this.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-
-        // Calculate rotation - ATTRACTING to mouse
-        const rotateY = -((x / rect.width) - 0.5) * 20; // Inverted for attraction
-        const rotateX = ((y / rect.height) - 0.5) * 20; // No negative multiplier
-
-        // Apply rotation
-        this.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-
-        // Keep shimmer overlay flat
-        const overlay = this.querySelector('.shimmer-overlay');
-        if (overlay) {
-          overlay.style.transform = 'translateZ(0.01px)';
-        }
+        if (!over) return;
+        var r = this.getBoundingClientRect();
+        this.style.transform = 'perspective(1000px) rotateX(' + ((e.clientY - r.top) / r.height - 0.5) * 20 + 'deg) rotateY(' + -((e.clientX - r.left) / r.width - 0.5) * 20 + 'deg)';
+        var o = this.querySelector('.shimmer-overlay');
+        if (o) o.style.transform = 'translateZ(0.01px)';
       });
-
-      // Reset on mouse leave with smooth transition
       card.addEventListener('mouseleave', function() {
-        isMouseOver = false;
-        this.style.transition = 'transform 0.5s ease-out, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease';
+        over = false;
+        this.style.transition = 'transform 0.4s ease-out, box-shadow 0.3s ease, background-color 0.3s ease, border-color 0.3s ease';
         this.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg)';
-
-        const overlay = this.querySelector('.shimmer-overlay');
-        if (overlay) {
-          overlay.style.transform = '';
-        }
+        var o = this.querySelector('.shimmer-overlay');
+        if (o) o.style.transform = '';
       });
     });
-  });
+  }
+  init();
+  setTimeout(init, 200);
+  if (typeof document$ !== 'undefined') document$.subscribe(init);
+})();
 </script></div>
 
 
@@ -1530,6 +1516,12 @@
         <script src="https://unpkg.com/three@0.157.0/build/three.min.js"></script>
       
         <script src="assets/process-polyfill.js"></script>
+      
+        <script src="assets/content-restrictions-video.js"></script>
+      
+        <script src="assets/contact-reps.js"></script>
+      
+        <script src="assets/home-feature-cards.js"></script>
       
         <script src="assets/demo-3d.bundle.js"></script>
       

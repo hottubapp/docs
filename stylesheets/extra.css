@@ -4,20 +4,20 @@
   --base-border-radius: 0.5rem;
 }
 
-/* Custom background color */
-body {
+/* Dark mode background overrides */
+[data-md-color-scheme="slate"] body {
   background-color: #191919 !important;
 }
 
-.md-container {
+[data-md-color-scheme="slate"] .md-container {
   background-color: #191919 !important;
 }
 
-.md-main {
+[data-md-color-scheme="slate"] .md-main {
   background-color: #191919 !important;
 }
 
-.md-content {
+[data-md-color-scheme="slate"] .md-content {
   background-color: #191919 !important;
 }
 
@@ -30,21 +30,22 @@ body {
   height: 100% !important;
   z-index: -1 !important;
   pointer-events: none !important;
+}
+
+[data-md-color-scheme="slate"] #bubble-background {
   background-color: #191919 !important;
 }
 
 /* Ensure content is above the bubble background */
-.md-container,
-.md-main,
-.md-content,
-.md-footer {
-  /* position: relative !important; */
-  /* z-index: 1 !important; */
+[data-md-color-scheme="slate"] .md-container,
+[data-md-color-scheme="slate"] .md-main,
+[data-md-color-scheme="slate"] .md-content,
+[data-md-color-scheme="slate"] .md-footer {
   background-color: transparent !important;
 }
 
 /* Make sure the main content area is transparent to show background */
-.md-main__inner {
+[data-md-color-scheme="slate"] .md-main__inner {
   background-color: transparent !important;
 }
 
@@ -158,35 +159,82 @@ del.critic {
 .grid.cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  margin: 1rem 0;
+  gap: 1.25rem;
+  margin: 1.25rem 0;
 }
 
 .grid.cards li {
-  background: #ffffff;
-  border: 1px solid #e0e0e0;
+  list-style: none;
+  margin: 0;
   border-radius: 12px;
-  padding: 20px;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 1.25rem 1.5rem;
+  transition: box-shadow 0.25s ease, border-color 0.2s ease, background 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.04);
 }
 
-.grid.cards li img {
-  width: 60px;
-  height: auto;
-  margin-bottom: 10px;
+.grid.cards li a {
+  display: block;
+  height: 100%;
+  min-height: 3.5rem;
+  text-decoration: none;
+  color: inherit;
+  pointer-events: auto;
+  cursor: pointer;
+  line-height: 1.35;
+}
+
+.grid.cards li a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.grid.cards li a strong {
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+/* Card body text smaller; title unchanged */
+.grid.cards li a {
+  font-size: 0.78rem;
+}
+.grid.cards li a strong {
+  font-size: 1.2em;
+}
+
+/* Big emoji on Get started cards */
+.grid.cards li a .card-emoji {
+  display: block;
+  font-size: 2.25rem;
+  line-height: 1.2;
+  margin-bottom: 0.4rem;
+}
+
+.grid.cards li img,
+.grid.cards li a img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 0.5rem;
+  object-fit: contain;
 }
 
 .grid.cards li:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+  border-color: rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.07);
 }
 
-/* Dark mode adjustments */
+/* Dark mode */
 [data-md-color-scheme="slate"] .grid.cards li {
-  background: var(--md-default-bg-color);
-  border-color: var(--md-default-fg-color--lightest);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-md-color-scheme="slate"] .grid.cards li:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.12);
 }
 
 .footer-content {
@@ -224,9 +272,9 @@ del.critic {
   width: 150px;
   padding: 8px;
   border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.1);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   cursor: pointer;
   position: relative;
@@ -239,6 +287,16 @@ del.critic {
 
 .feature-card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.08);
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
+[data-md-color-scheme="slate"] .feature-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+[data-md-color-scheme="slate"] .feature-card:hover {
   background-color: rgba(255, 255, 255, 0.15);
   border-color: rgba(255, 255, 255, 0.25);
 }
@@ -317,4 +375,71 @@ del.critic {
 
 .feature-card:hover .feature-description {
   color: #777;
+}
+
+/* Home: keep "Get started" cards above 3D hero overflow so they stay clickable */
+.md-content .grid.cards {
+  position: relative;
+  z-index: 2;
+  pointer-events: auto;
+}
+
+/* Content restrictions embed — two-column layout */
+.cr-layout {
+  display: flex;
+  gap: 1.5rem;
+  align-items: start;
+  margin-bottom: 1rem;
+}
+.cr-info {
+  flex: 1;
+  min-width: 0;
+}
+.cr-video {
+  flex: 0 0 220px;
+}
+.cr-video__title {
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.3;
+  margin-bottom: 2px;
+}
+.cr-video__subtitle {
+  font-size: 10px;
+  opacity: 0.6;
+  line-height: 1.3;
+  margin-bottom: 6px;
+}
+.cr-video__frame {
+  aspect-ratio: 390 / 844;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  background: #111;
+}
+.cr-video__frame video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Mobile: stack video below the warning box, center the video block */
+@media (max-width: 768px) {
+  .cr-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+  .cr-info {
+    width: 100%;
+  }
+  .cr-video {
+    flex: none;
+    width: 100%;
+    max-width: 260px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }

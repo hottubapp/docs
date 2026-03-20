@@ -1272,9 +1272,9 @@
 <p>The <code>POST /api/uploaders</code> endpoint returns profile details for a content creator or studio. The app calls this when a user taps an uploader name to view their profile page.</p>
 <h3 id="request">Request</h3>
 <p><code>POST /api/uploaders</code></p>
-<p>At least one of <code>uploader_id</code> or <code>uploader_name</code> must be provided.</p>
+<p>At least one of <code>uploaderId</code> or <code>uploaderName</code> must be provided.</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">"uploader_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abc123"</span><span class="p">,</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">"uploaderId"</span><span class="p">:</span><span class="w"> </span><span class="s2">"abc123"</span><span class="p">,</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">"profileContent"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">"query"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kittens"</span>
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p">}</span>
@@ -1291,13 +1291,13 @@
 </thead>
 <tbody>
 <tr>
-<td><code>uploader_id</code></td>
+<td><code>uploaderId</code></td>
 <td><code>string</code></td>
 <td>⚠️ One of</td>
 <td>Internal uploader ID</td>
 </tr>
 <tr>
-<td><code>uploader_name</code></td>
+<td><code>uploaderName</code></td>
 <td><code>string</code></td>
 <td>⚠️ One of</td>
 <td>Uploader display name</td>
@@ -1318,17 +1318,17 @@
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://www.example.com/@awesomeVids"</span><span class="p">,</span>
 <a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">"channel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-channel"</span><span class="p">,</span>
 <a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nt">"verified"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="nt">"video_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">342</span><span class="p">,</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="nt">"total_views"</span><span class="p">:</span><span class="w"> </span><span class="mi">14500000</span><span class="p">,</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="nt">"videoCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">342</span><span class="p">,</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="nt">"totalViews"</span><span class="p">:</span><span class="w"> </span><span class="mi">14500000</span><span class="p">,</span>
 <a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="nt">"channels"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="p">{</span>
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">      </span><span class="nt">"channel"</span><span class="p">:</span><span class="w"> </span><span class="s2">"my-channel"</span><span class="p">,</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="nt">"video_count"</span><span class="p">:</span><span class="w"> </span><span class="mi">342</span><span class="p">,</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">      </span><span class="nt">"first_seen_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-01-15T00:00:00"</span><span class="p">,</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">      </span><span class="nt">"last_seen_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-03-01T00:00:00"</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="nt">"videoCount"</span><span class="p">:</span><span class="w"> </span><span class="mi">342</span><span class="p">,</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">      </span><span class="nt">"firstSeenAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2024-01-15T00:00:00"</span><span class="p">,</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">      </span><span class="nt">"lastSeenAt"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2025-03-01T00:00:00"</span>
 <a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">  </span><span class="p">],</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">  </span><span class="nt">"profile_picture_url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/avatar.jpg"</span><span class="p">,</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">  </span><span class="nt">"avatar"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/avatar.jpg"</span><span class="p">,</span>
 <a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">  </span><span class="nt">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"The best videos on the internet."</span><span class="p">,</span>
 <a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">  </span><span class="nt">"bio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Videos are awesome."</span><span class="p">,</span>
 <a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">  </span><span class="nt">"videos"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -1351,7 +1351,7 @@
 <a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a><span class="w">  </span><span class="nt">"tapes"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
 <a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="w">  </span><span class="nt">"playlists"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
 <a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="w">  </span><span class="nt">"layout"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"horizontal_videos"</span><span class="p">,</span><span class="w"> </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"For You"</span><span class="p">,</span><span class="w"> </span><span class="nt">"video_ids"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"c85017ca87477168d648727753c4ded8"</span><span class="p">]</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"horizontal"</span><span class="p">,</span><span class="w"> </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"For You"</span><span class="p">,</span><span class="w"> </span><span class="nt">"videoIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"c85017ca87477168d648727753c4ded8"</span><span class="p">]</span><span class="w"> </span><span class="p">},</span>
 <a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"videos"</span><span class="p">,</span><span class="w"> </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="p">}</span>
 <a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="w">  </span><span class="p">]</span>
 <a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="p">}</span>
@@ -1394,12 +1394,12 @@
 <td>Whether the uploader is verified</td>
 </tr>
 <tr>
-<td><code>video_count</code></td>
+<td><code>videoCount</code></td>
 <td><code>number</code></td>
 <td>Total indexed videos</td>
 </tr>
 <tr>
-<td><code>total_views</code></td>
+<td><code>totalViews</code></td>
 <td><code>number</code></td>
 <td>Aggregated view count</td>
 </tr>
@@ -1409,9 +1409,9 @@
 <td>Per-channel video stats</td>
 </tr>
 <tr>
-<td><code>profile_picture_url</code></td>
+<td><code>avatar</code></td>
 <td><code>string \| null</code></td>
-<td>Avatar URL</td>
+<td>Avatar image URL (canonical)</td>
 </tr>
 <tr>
 <td><code>description</code></td>
@@ -1445,6 +1445,7 @@
 </tr>
 </tbody>
 </table>
+<p>See <a href="../../server/#json-key-names">JSON key names</a> for camelCase vs snake_case and the legacy <code>profile_picture_url</code> avatar key.</p>
 <hr>
 <h3 id="channelstat-object">ChannelStat Object</h3>
 <table>
@@ -1462,17 +1463,17 @@
 <td>Source channel identifier</td>
 </tr>
 <tr>
-<td><code>video_count</code></td>
+<td><code>videoCount</code></td>
 <td><code>number</code></td>
 <td>Videos seen on this channel</td>
 </tr>
 <tr>
-<td><code>first_seen_at</code></td>
+<td><code>firstSeenAt</code></td>
 <td><code>string \| null</code></td>
 <td>ISO timestamp of first appearance on this channel</td>
 </tr>
 <tr>
-<td><code>last_seen_at</code></td>
+<td><code>lastSeenAt</code></td>
 <td><code>string \| null</code></td>
 <td>ISO timestamp of last appearance on this channel</td>
 </tr>
@@ -1571,7 +1572,7 @@
 <tr>
 <td><code>type</code></td>
 <td><code>string</code></td>
-<td><code>"videos"</code> (vertical list) or <code>"horizontal_videos"</code> (carousel)</td>
+<td><code>"videos"</code> (vertical list) or <strong><code>horizontal</code></strong> (carousel). Legacy <strong><code>horizontal_videos</code></strong> is accepted.</td>
 </tr>
 <tr>
 <td><code>title</code></td>
@@ -1579,9 +1580,9 @@
 <td>Section heading</td>
 </tr>
 <tr>
-<td><code>video_ids</code></td>
+<td><code>videoIds</code></td>
 <td><code>string[]</code></td>
-<td>Ordered video IDs — only present on <code>"horizontal_videos"</code> rows</td>
+<td>Ordered video IDs — only for <strong><code>horizontal</code></strong> / legacy <strong><code>horizontal_videos</code></strong>. Snake_case <strong><code>video_ids</code></strong> is accepted when decoding.</td>
 </tr>
 </tbody>
 </table>
@@ -1597,7 +1598,7 @@
 <tbody>
 <tr>
 <td><code>400</code></td>
-<td>Neither <code>uploader_id</code> nor <code>uploader_name</code> given</td>
+<td>Neither <code>uploaderId</code> nor <code>uploaderName</code> given</td>
 </tr>
 <tr>
 <td><code>404</code></td>
@@ -1760,6 +1761,12 @@
         <script src="https://unpkg.com/three@0.157.0/build/three.min.js"></script>
       
         <script src="../../../assets/process-polyfill.js"></script>
+      
+        <script src="../../../assets/content-restrictions-video.js"></script>
+      
+        <script src="../../../assets/contact-reps.js"></script>
+      
+        <script src="../../../assets/home-feature-cards.js"></script>
       
         <script src="../../../assets/demo-3d.bundle.js"></script>
       

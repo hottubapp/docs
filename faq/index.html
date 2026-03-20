@@ -1165,20 +1165,7 @@
 <h2 id="getting-started">Getting Started</h2>
 <details class="question">
 <summary>The app won't open or install</summary>
-<p>Your device might be blocking the app due to Apple's content restrictions.
-Here's how to fix it:</p>
-<ol>
-<li>Open the <strong>Settings</strong> app</li>
-<li>Go to <strong>Screen Time</strong> → <strong>Content &amp; Privacy Restrictions</strong></li>
-<li>Turn <strong>Content &amp; Privacy Restrictions</strong> ON (if it's off)</li>
-<li>Tap <strong>App Store, Media, Web &amp; Games</strong> → <strong>Apps</strong></li>
-<li>Change the rating from <strong>18+</strong> to <strong>Unrated</strong></li>
-<li>Then try installing Hot Tub again — it should work</li>
-</ol>
-<div class="admonition danger">
-<p class="admonition-title">Important Warning</p>
-<p><strong>Do not set the allowed apps rating to anything below 18+.</strong> Setting the rating below 18+ will remove apps from your home screen and disrupt your device's app organization. Always keep the rating at <strong>18+</strong> or <strong>Unrated</strong>.</p>
-</div>
+<p></p><div class="content-restrictions-embed"></div>
 </details>
 <details class="question">
 <summary>I don't see any videos</summary>
@@ -1201,6 +1188,21 @@ Here's how to fix it:</p>
 <details class="question">
 <summary>How do I download in the highest quality?</summary>
 <p>Hot Tub automatically attempts to download the highest quality available. If you're getting lower quality, the source might not provide higher quality options. You can change the quality by tapping the ellipses <span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 24 24"><path d="M12 2a10 10 0 0 1 10 10 10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2m0 2a8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8 8 8 0 0 0-8-8m0 6.5a1.5 1.5 0 0 1 1.5 1.5 1.5 1.5 0 0 1-1.5 1.5 1.5 1.5 0 0 1-1.5-1.5 1.5 1.5 0 0 1 1.5-1.5m-4.5 0A1.5 1.5 0 0 1 9 12a1.5 1.5 0 0 1-1.5 1.5A1.5 1.5 0 0 1 6 12a1.5 1.5 0 0 1 1.5-1.5m9 0A1.5 1.5 0 0 1 18 12a1.5 1.5 0 0 1-1.5 1.5A1.5 1.5 0 0 1 15 12a1.5 1.5 0 0 1 1.5-1.5"></path></svg></span> button when the video player controls are displayed.</p>
+</details>
+<details class="question">
+<summary>How do I send a crash report?</summary>
+<p>You can send crash reports in two ways:</p>
+<p><strong>Option 1: Use Hot Tub's built-in crash reporting</strong></p>
+<p>Turn on crash reporting in Hot Tub: open <strong>Settings</strong> → <strong>Privacy</strong>, and enable crash reporting. When enabled, crash reports are sent automatically so we can fix issues faster.</p>
+<p><strong>Option 2: Send a crash log manually</strong></p>
+<p>If you prefer to send a report yourself (or if the app crashed before you could enable the setting):</p>
+<ol>
+<li>Open the <strong>Settings</strong> app on your device</li>
+<li>Go to <strong>Privacy &amp; Security</strong> → <strong>Analytics &amp; Improvements</strong> → <strong>Analytics Data</strong></li>
+<li>Search for "Hot Tub" and select a log (the most recent is usually at the bottom of the list)</li>
+<li>Tap <strong>Share</strong> in the top right</li>
+<li>Email the log to <a href="mailto:support@hottubapp.io?subject=Crash%20report">support@hottubapp.io</a> with the subject <strong>Crash report</strong> (or "crashlog"). Include any relevant details: steps to reproduce, device model, iOS version, region, etc.</li>
+</ol>
 </details>
 <h2 id="general-questions">General Questions</h2>
 <details class="question">
@@ -1418,6 +1420,12 @@ I wanted to make a native iOS app that was clean, simple, and easy to use.</p>
         <script src="https://unpkg.com/three@0.157.0/build/three.min.js"></script>
       
         <script src="../assets/process-polyfill.js"></script>
+      
+        <script src="../assets/content-restrictions-video.js"></script>
+      
+        <script src="../assets/contact-reps.js"></script>
+      
+        <script src="../assets/home-feature-cards.js"></script>
       
         <script src="../assets/demo-3d.bundle.js"></script>
       

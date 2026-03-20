@@ -1,0 +1,203 @@
+[
+  {
+    "name": "COMP DMA Registry",
+    "email": "COMP-DMA-registry@ec.europa.eu",
+    "role": "DMA Enforcement",
+    "group": "European Commission",
+    "member_state": "EU"
+  },
+  {
+    "name": "European Commission – DMA Enforcement (General)",
+    "email": "EC-DMA@ec.europa.eu",
+    "role": "General Enforcement Contact",
+    "group": "European Commission",
+    "member_state": "EU"
+  },
+  {
+    "name": "European Commission – DMA Apple Non-Compliance Team",
+    "email": "CNECT-EC-DMA-Apple-NCT@ec.europa.eu",
+    "role": "Apple Non-Compliance Team",
+    "group": "European Commission",
+    "member_state": "EU"
+  },
+  {
+    "name": "Anna Cavazzini",
+    "email": "anna.cavazzini@europarl.europa.eu",
+    "role": "Member of European Parliament (MEP)",
+    "group": "European Parliament – IMCO",
+    "member_state": "Germany"
+  },
+  {
+    "name": "IMCO Secretariat",
+    "email": "imco-secretariat@europarl.europa.eu",
+    "role": "Secretariat",
+    "group": "European Parliament – IMCO",
+    "member_state": "EU"
+  },
+  {
+    "name": "Adam Bielan",
+    "email": "adam.bielan@europarl.europa.eu",
+    "role": "Member of European Parliament (MEP)",
+    "group": "European Parliament – IMCO",
+    "member_state": "Poland"
+  },
+  {
+    "name": "European Data Protection Board (EDPB)",
+    "email": "edpb@edpb.europa.eu",
+    "role": "Regulatory Authority",
+    "group": "European Commission",
+    "member_state": "EU"
+  },
+  {
+    "name": "BEUC – Consumer Rights",
+    "email": "consumer-rights@beuc.eu",
+    "role": "Consumer Advocacy",
+    "group": "NGO",
+    "member_state": "EU"
+  },
+  {
+    "name": "Council of the EU – Competition",
+    "email": "competition@consilium.europa.eu",
+    "role": "Competition Council Contact",
+    "group": "Council of the European Union",
+    "member_state": "EU"
+  },
+  {
+    "name": "Comp Greffe Antitrust",
+    "email": "comp-greffe-antitrust@ec.europa.eu",
+    "role": "Antitrust Registry",
+    "group": "European Commission",
+    "member_state": "EU"
+  },
+  {
+    "name": "Comp Market Information",
+    "email": "comp-market-information@ec.europa.eu",
+    "role": "Market Information",
+    "group": "European Commission",
+    "member_state": "EU"
+  },
+  {
+    "name": "Cab Virkkunen Contact",
+    "email": "cab-virkkunen-contact@ec.europa.eu",
+    "role": "Cabinet Staff",
+    "group": "European Commission",
+    "member_state": "EU"
+  },
+  {
+    "name": "Cab Zaharieva Contact",
+    "email": "cab-zaharieva-contact@ec.europa.eu",
+    "role": "Cabinet Staff",
+    "group": "European Commission",
+    "member_state": "EU"
+  },
+  {
+    "name": "Cab McGrath Contact",
+    "email": "cab-mcgrath-contact@ec.europa.eu",
+    "role": "Cabinet Staff",
+    "group": "European Commission",
+    "member_state": "EU"
+  },
+  {
+    "name": "Cab Ribera Rodriguez Contact",
+    "email": "cab-ribera-rodriguez-contact@ec.europa.eu",
+    "role": "Cabinet Staff",
+    "group": "European Commission",
+    "member_state": "EU"
+  },
+  {
+    "name": "Cab Ribera Rodriguez Contact Team",
+    "email": "cab-ribera-contact@ec.europa.eu",
+    "role": "Cabinet Staff",
+    "group": "European Commission",
+    "member_state": "EU"
+  },
+  {
+    "name": "Cab Sefcovic Contact",
+    "email": "cab-sefcovic-contact@ec.europa.eu",
+    "role": "Cabinet Staff",
+    "group": "European Commission",
+    "member_state": "EU"
+  },
+  {
+    "name": "Bernd Biervert",
+    "email": "bernd.biervert@ec.europa.eu",
+    "role": "Policy Officer",
+    "group": "European Commission",
+    "member_state": "EU"
+  },
+  {
+    "name": "Sofia Asteriadi",
+    "email": "sofia.asteriadi@ec.europa.eu",
+    "role": "Policy Officer",
+    "group": "European Commission",
+    "member_state": "EU"
+  },
+  {
+    "name": "Adam Romanowski",
+    "email": "adam.romanowski@ec.europa.eu",
+    "role": "Policy Officer",
+    "group": "European Commission",
+    "member_state": "EU"
+  },
+  {
+    "name": "Jan-Hendrik Dopheide",
+    "email": "jan-hendrik.dopheide@ec.europa.eu",
+    "role": "Policy Officer",
+    "group": "European Commission",
+    "member_state": "EU"
+  },
+  {
+    "name": "Chiara Galiffa",
+    "email": "chiara.galiffa@ec.europa.eu",
+    "role": "Policy Officer",
+    "group": "European Commission",
+    "member_state": "EU"
+  },
+  {
+    "name": "Darta Tentere",
+    "email": "darta.tentere@ec.europa.eu",
+    "role": "Policy Officer",
+    "group": "European Commission",
+    "member_state": "EU"
+  },
+  {
+    "name": "Federal Network Agency (BNetzA)",
+    "email": "poststelle@bnetza.de",
+    "role": "National Regulator – Telecommunications & Competition",
+    "group": "Germany",
+    "member_state": "Germany",
+    "notes": "Accepts legal filings with qualified electronic signature. Submit objections via PDF/A format under eIDAS rules."
+  },
+  {
+    "name": "Comisión Nacional de los Mercados y la Competencia (CNMC)",
+    "email": "contacto@cnmc.es",
+    "role": "National Competition Authority",
+    "group": "Spain",
+    "member_state": "Spain",
+    "notes": "General contact address for CNMC inquiries or complaints related to market and competition issues."
+  },
+  {
+    "name": "Netherlands Authority for Consumers and Markets (ACM)",
+    "email": "info@acm.nl",
+    "role": "National Competition & Digital Markets Authority",
+    "group": "Netherlands",
+    "member_state": "Netherlands",
+    "notes": "Collecting input on cloud services and DMA relevance. Welcomes input from EU experts, businesses, and regulators."
+  },
+  {
+    "name": "Autorità per le Garanzie nelle Comunicazioni (AGCOM)",
+    "email": "info@agcom.it",
+    "role": "National Communications & Competition Authority",
+    "group": "Italy",
+    "member_state": "Italy",
+    "notes": "AGCOM enforces DMA in Italy. General inquiries related to competition and digital markets can be sent here."
+  },
+  {
+    "name": "Competition and Consumer Protection Commission (CCPC)",
+    "email": "complaints@ccpc.ie",
+    "role": "National Competition Authority",
+    "group": "Ireland",
+    "member_state": "Ireland",
+    "notes": "Handles competition complaints including DMA enforcement. Offers anonymous cartel reporting via third-party platform."
+  }
+]
