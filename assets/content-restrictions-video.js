@@ -20,10 +20,8 @@ function injectContentRestrictionsVideo() {
             '<li>Change the rating to <strong>Unrated</strong></li>' +
             '<li>Then try opening or installing Hot Tub again \u2014 it should work</li>' +
           '</ol>' +
-          '<div class="admonition danger" style="margin-top:1rem;">' +
-            '<p class="admonition-title">Important Warning</p>' +
-            '<p><strong>Do not set the allowed apps rating to anything below 18+.</strong> ' +
-            'Setting the rating below 18+ will remove apps from your home screen and disrupt ' +
+          '<div style="margin-top:1rem; font-style: italic; font-size: 0.9em;">' +
+            '<p>Setting the rating below 18+ will remove apps from your home screen and disrupt ' +
             'your device\'s app organization. Always keep the rating at <strong>18+</strong> or <strong>Unrated</strong>.</p>' +
           '</div>' +
         '</div>' +
@@ -34,7 +32,7 @@ function injectContentRestrictionsVideo() {
         '<div class="cr-video__title">Watch: How to change your content rating</div>' +
         '<div class="cr-video__subtitle">Screen Time \u2192 Content &amp; Privacy Restrictions \u2192 Apps \u2192 Unrated</div>' +
         '<div class="cr-video__frame">' +
-          '<video controls autoplay muted playsinline preload="auto">' +
+          '<video autoplay muted playsinline preload="auto" loop>' +
             '<source src="https://cdn.hottubapp.io/assets/onboarding/app-content-restrictions.mp4" type="video/mp4">' +
           '</video>' +
         '</div>' +
