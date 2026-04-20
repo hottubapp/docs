@@ -488,6 +488,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../safari-extension/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🧩 Safari extension
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../setup/" class="md-nav__link">
         
   
@@ -579,10 +601,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   
@@ -595,8 +617,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Developers
           </label>
@@ -652,10 +674,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
             
   
   
@@ -668,8 +690,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_2">
             <span class="md-nav__icon md-icon"></span>
             🌐 Endpoints
           </label>
@@ -1006,10 +1028,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
   
@@ -1022,8 +1044,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             About Us
           </label>
@@ -1455,7 +1477,7 @@ For example, you may return different categories, channels, or notices based on 
 <a id="__codelineno-1-114" name="__codelineno-1-114" href="#__codelineno-1-114"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-1-115" name="__codelineno-1-115" href="#__codelineno-1-115"></a><span class="w">  </span><span class="p">],</span>
 <a id="__codelineno-1-116" name="__codelineno-1-116" href="#__codelineno-1-116"></a><span class="w">  </span><span class="nt">"popup"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span>
-<a id="__codelineno-1-117" name="__codelineno-1-117" href="#__codelineno-1-117"></a><span class="w">  </span><span class="nt">"filtersFooter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Help us improve our algorithms by selecting the categories that best describe you. These may not change search results on your source, but they help personalize the overall app experience."</span>
+<a id="__codelineno-1-117" name="__codelineno-1-117" href="#__codelineno-1-117"></a><span class="w">  </span><span class="nt">"filtersFooter"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Select the categories that best describe your viewing preferences."</span>
 <a id="__codelineno-1-118" name="__codelineno-1-118" href="#__codelineno-1-118"></a><span class="p">}</span>
 </code></pre></div>
 <h2 id="field-reference">Field Reference</h2>
@@ -1586,6 +1608,12 @@ For example, you may return different categories, channels, or notices based on 
 <td>✅</td>
 <td>Ordered list of channel IDs belonging to this group</td>
 </tr>
+<tr>
+<td><code>systemImage</code></td>
+<td><code>string</code></td>
+<td>⚪</td>
+<td>SF Symbol name for the section header (e.g. <code>play.rectangle.fill</code>). Omit for client fallback from <code>groupKey</code> / titles.</td>
+</tr>
 </tbody>
 </table>
 <div class="admonition info">
@@ -1599,7 +1627,7 @@ For example, you may return different categories, channels, or notices based on 
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// Option A: channelGroups (explicit, recommended for complex layouts)</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="p">{</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">"channelGroups"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"featured"</span><span class="p">,</span><span class="w"> </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Featured"</span><span class="p">,</span><span class="w"> </span><span class="nt">"channelIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"tube-a"</span><span class="p">,</span><span class="w"> </span><span class="s2">"tube-b"</span><span class="p">]</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"featured"</span><span class="p">,</span><span class="w"> </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Featured"</span><span class="p">,</span><span class="w"> </span><span class="nt">"channelIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"tube-a"</span><span class="p">,</span><span class="w"> </span><span class="s2">"tube-b"</span><span class="p">],</span><span class="w"> </span><span class="nt">"systemImage"</span><span class="p">:</span><span class="w"> </span><span class="s2">"play.rectangle.fill"</span><span class="w"> </span><span class="p">},</span>
 <a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="p">{</span><span class="w"> </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"niche"</span><span class="p">,</span><span class="w">    </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Niche"</span><span class="p">,</span><span class="w">    </span><span class="nt">"channelIds"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"tube-c"</span><span class="p">]</span><span class="w"> </span><span class="p">}</span>
 <a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="p">]</span>
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="p">}</span>

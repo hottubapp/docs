@@ -488,6 +488,28 @@
   
   
     <li class="md-nav__item">
+      <a href="../../../safari-extension/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🧩 Safari extension
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../../setup/" class="md-nav__link">
         
   
@@ -579,10 +601,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
             
   
   
@@ -595,8 +617,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Developers
           </label>
@@ -652,10 +674,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
             
   
   
@@ -668,8 +690,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_2_label" aria-expanded="true">
-          <label class="md-nav__title" for="__nav_6_2">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7_2">
             <span class="md-nav__icon md-icon"></span>
             🌐 Endpoints
           </label>
@@ -979,10 +1001,10 @@
         
           
         
-        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
             
   
   
@@ -995,8 +1017,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             About Us
           </label>
@@ -1522,7 +1544,7 @@
 <td><code>url</code></td>
 <td><code>string</code></td>
 <td>✅</td>
-<td>Video source URL</td>
+<td>Public web page URL for this video (the permalink / watch page users open in a browser). <strong>Not</strong> a direct stream or media file — use <code>formats[].url</code> for playable streams</td>
 </tr>
 <tr>
 <td><code>duration</code></td>
@@ -1658,6 +1680,11 @@
 </tr>
 </tbody>
 </table>
+<div class="admonition warning">
+<p class="admonition-title">Video <code>url</code> is the web page, not the stream</p>
+<p>The top-level <code>url</code> on each video must be the <strong>publicly accessible web URL</strong> — the same kind of address you would share or open to view that video on the site (watch page, canonical permalink, etc.).</p>
+<p><strong>Do not</strong> use a direct stream URL, progressive file URL, or raw CDN media URL for <code>url</code>. The app relies on this value for identity, linking, and extraction context. <strong>Playable stream URLs</strong> belong in the <code>formats</code> array (<code>formats[].url</code>); see <a href="#format-object-fields">Format Object Fields</a>.</p>
+</div>
 <div class="admonition info">
 <p class="admonition-title">Live &amp; Availability Display</p>
 <p>The app uses <code>isLive</code> and <code>liveStatus</code> together to determine how a video card renders:</p>
