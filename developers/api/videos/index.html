@@ -1696,12 +1696,13 @@
 <p>During playback, the player also detects live streams from the HLS stream itself (indefinite duration) and adjusts transport controls accordingly — so <code>isLive</code> is not required for playback to behave correctly, but it ensures the video card UI is accurate before the stream is loaded.</p>
 </div>
 <h3 id="uploaderprofile-object">UploaderProfile Object</h3>
-<p>Attached to each video item when a known uploader profile exists. Used to render the uploader row on video cards without a separate API call.</p>
+<p>Attached to each video item when a known uploader profile exists. Used to render the uploader row on video cards without a separate API call. Same naming rules as full uploader objects on <a href="../uploaders/#uploader-object"><code>/api/uploaders</code></a>.</p>
 <table>
 <thead>
 <tr>
 <th>Field</th>
 <th>Type</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -1709,26 +1710,37 @@
 <tr>
 <td><code>id</code></td>
 <td><code>string</code></td>
-<td>Uploader identifier</td>
+<td>✅</td>
+<td>Stable uploader identifier (matches <a href="../uploaders/#uploader-object"><code>uploaders.id</code></a>)</td>
 </tr>
 <tr>
 <td><code>name</code></td>
 <td><code>string</code></td>
+<td>✅</td>
 <td>Display name</td>
 </tr>
 <tr>
+<td><code>normalizedName</code></td>
+<td><code>string</code></td>
+<td>⚪</td>
+<td>Canonical key; omit to derive from <code>name</code> (snake_case: <strong><code>normalized_name</code></strong> — <a href="../../server/#json-key-names">JSON keys</a>)</td>
+</tr>
+<tr>
 <td><code>avatar</code></td>
-<td><code>string \| null</code></td>
+<td><code>string</code> or null</td>
+<td>⚪</td>
 <td>Avatar image URL (canonical)</td>
 </tr>
 <tr>
 <td><code>videoCount</code></td>
 <td><code>number</code></td>
+<td>⚪</td>
 <td>Total indexed videos</td>
 </tr>
 <tr>
 <td><code>totalViews</code></td>
 <td><code>number</code></td>
+<td>⚪</td>
 <td>Aggregated view count</td>
 </tr>
 </tbody>

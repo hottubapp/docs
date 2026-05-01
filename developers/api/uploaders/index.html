@@ -875,9 +875,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#layoutrow-object" class="md-nav__link">
+  <a href="#layoutsection-object-layout" class="md-nav__link">
     <span class="md-ellipsis">
-      LayoutRow Object
+      LayoutSection object (layout[])
     </span>
   </a>
   
@@ -1250,9 +1250,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#layoutrow-object" class="md-nav__link">
+  <a href="#layoutsection-object-layout" class="md-nav__link">
     <span class="md-ellipsis">
-      LayoutRow Object
+      LayoutSection object (layout[])
     </span>
   </a>
   
@@ -1292,6 +1292,7 @@
 
 <div><h2 id="overview">Overview</h2>
 <p>The <code>POST /api/uploaders</code> endpoint returns profile details for a content creator or studio. The app calls this when a user taps an uploader name to view their profile page.</p>
+<p>See <a href="../../server/#json-key-names">JSON key names</a> for <strong>snake_case</strong> (<code>normalized_name</code>) vs <strong>camelCase</strong> (<code>normalizedName</code>) — they refer to the <strong>same</strong> field; send one style, not both.</p>
 <h3 id="request">Request</h3>
 <p><code>POST /api/uploaders</code></p>
 <p>At least one of <code>uploaderId</code> or <code>uploaderName</code> must be provided.</p>
@@ -1323,6 +1324,24 @@
 <td><code>string</code></td>
 <td>⚠️ One of</td>
 <td>Uploader display name</td>
+</tr>
+<tr>
+<td><code>profileContent</code></td>
+<td><code>boolean</code></td>
+<td>⚪</td>
+<td>When <code>true</code>, response may include <code>videos</code>, <code>tapes</code>, <code>playlists</code>, <code>layout</code></td>
+</tr>
+<tr>
+<td><code>profileVideosSort</code></td>
+<td><code>string</code></td>
+<td>⚪</td>
+<td>With <code>profileContent</code>: sort axis — <code>uploadDate</code>, <code>duration</code>, <code>views</code>, <code>title</code></td>
+</tr>
+<tr>
+<td><code>profileVideosOrder</code></td>
+<td><code>string</code></td>
+<td>⚪</td>
+<td>With <code>profileContent</code>: <code>asc</code> or <code>desc</code></td>
 </tr>
 <tr>
 <td><code>query</code></td>
@@ -1381,93 +1400,142 @@
 <hr>
 <h2 id="field-reference">Field Reference</h2>
 <h3 id="uploader-object">Uploader Object</h3>
+<p>Minimum for a successful profile decode: <strong><code>id</code></strong> and <strong><code>name</code></strong>. Everything else is optional or has client-side defaults (see tips below).</p>
 <table>
 <thead>
 <tr>
 <th>Field</th>
 <th>Type</th>
+<th>Required</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><code>id</code></td>
-<td><code>string</code></td>
-<td>Unique uploader identifier</td>
+<td><code>string | number</code></td>
+<td>✅</td>
+<td>Stable uploader identifier (string recommended; numeric <code>id</code> is accepted)</td>
 </tr>
 <tr>
 <td><code>name</code></td>
 <td><code>string</code></td>
+<td>✅</td>
 <td>Display name</td>
 </tr>
 <tr>
+<td><code>normalizedName</code></td>
+<td><code>string</code></td>
+<td>⚪</td>
+<td>Canonical match key; <strong>omit</strong> unless you need a value different from lowercased/trimmed <code>name</code>. In JSON prefer snake_case: <strong><code>normalized_name</code></strong> (same field — <a href="../../server/#json-key-names">see naming</a>)</td>
+</tr>
+<tr>
 <td><code>url</code></td>
-<td><code>string \| null</code></td>
+<td><code>string | null</code></td>
+<td>⚪</td>
 <td>Profile URL</td>
 </tr>
 <tr>
 <td><code>channel</code></td>
-<td><code>string \| null</code></td>
+<td><code>string | null</code></td>
+<td>⚪</td>
 <td>Primary source channel</td>
 </tr>
 <tr>
 <td><code>verified</code></td>
 <td><code>boolean</code></td>
-<td>Whether the uploader is verified</td>
+<td>⚪</td>
+<td>Default <code>false</code> if omitted</td>
 </tr>
 <tr>
 <td><code>videoCount</code></td>
 <td><code>number</code></td>
-<td>Total indexed videos</td>
+<td>⚪</td>
+<td>Default <code>0</code>; string/number accepted</td>
 </tr>
 <tr>
 <td><code>totalViews</code></td>
 <td><code>number</code></td>
-<td>Aggregated view count</td>
+<td>⚪</td>
+<td>Default <code>0</code>; string/number accepted</td>
 </tr>
 <tr>
 <td><code>channels</code></td>
-<td><code>ChannelStat[] \| null</code></td>
-<td>Per-channel video stats</td>
+<td><code>ChannelStat[] | null</code></td>
+<td>⚪</td>
+<td>Per-channel video stats; invalid entries may be dropped</td>
 </tr>
 <tr>
 <td><code>avatar</code></td>
-<td><code>string \| null</code></td>
-<td>Avatar image URL (canonical)</td>
+<td><code>string | null</code></td>
+<td>⚪</td>
+<td>Avatar URL; legacy <strong><code>profile_picture_url</code></strong> (snake_case) also decoded</td>
 </tr>
 <tr>
 <td><code>description</code></td>
-<td><code>string \| null</code></td>
+<td><code>string | null</code></td>
+<td>⚪</td>
 <td>Short description</td>
 </tr>
 <tr>
 <td><code>bio</code></td>
-<td><code>string \| null</code></td>
+<td><code>string | null</code></td>
+<td>⚪</td>
 <td>Long-form biography</td>
 </tr>
 <tr>
-<td><code>videos</code></td>
-<td><code>VideoRef[] \| null</code></td>
-<td>Videos — present when <code>profileContent</code> is <code>true</code></td>
+<td><code>type</code></td>
+<td><code>string | null</code></td>
+<td>⚪</td>
+<td>e.g. <code>"studio"</code> / <code>"uploader"</code> for partner UI</td>
 </tr>
 <tr>
-<td><code>tapes</code></td>
-<td><code>any[] \| null</code></td>
-<td>Short-form content — present when <code>profileContent</code> is <code>true</code></td>
+<td><code>cta</code></td>
+<td><code>object | null</code></td>
+<td>⚪</td>
+<td>Call-to-action payload; malformed values omitted</td>
 </tr>
 <tr>
-<td><code>playlists</code></td>
-<td><code>any[] \| null</code></td>
-<td>Playlists — present when <code>profileContent</code> is <code>true</code></td>
+<td><code>tipConfig</code></td>
+<td><code>object | null</code></td>
+<td>⚪</td>
+<td>Tipping configuration; malformed values omitted</td>
 </tr>
 <tr>
 <td><code>layout</code></td>
-<td><code>LayoutRow[] \| null</code></td>
-<td>Ordered profile page sections</td>
+<td><code>LayoutSection[] | null</code></td>
+<td>⚪</td>
+<td>Ordered profile sections; unknown <code>type</code> values are ignored client-side</td>
+</tr>
+<tr>
+<td><code>videos</code></td>
+<td><code>VideoRef[] | null</code></td>
+<td>⚪</td>
+<td>Present when <code>profileContent</code> is <code>true</code></td>
+</tr>
+<tr>
+<td><code>tapes</code></td>
+<td><code>any[] | null</code></td>
+<td>⚪</td>
+<td>Present when <code>profileContent</code> is <code>true</code></td>
+</tr>
+<tr>
+<td><code>playlists</code></td>
+<td><code>any[] | null</code></td>
+<td>⚪</td>
+<td>Present when <code>profileContent</code> is <code>true</code></td>
 </tr>
 </tbody>
 </table>
-<p>See <a href="../../server/#json-key-names">JSON key names</a> for camelCase vs snake_case and the legacy <code>profile_picture_url</code> avatar key.</p>
+<div class="admonition tip">
+<p class="admonition-title">Custom sources: keep the uploader payload boring</p>
+<ul>
+<li>Send <strong><code>id</code></strong> + <strong><code>name</code></strong> always; add <strong><code>avatar</code></strong>, <strong><code>videoCount</code></strong>, <strong><code>totalViews</code></strong> when you have them.</li>
+<li><strong>Skip <code>normalized_name</code></strong> unless your canonical slug differs from “lowercase trim of <code>name</code>”.</li>
+<li><strong>Skip <code>layout</code></strong> unless you need a custom section order; the app defaults to a horizontal “For You” row plus a main grid when layout is absent.</li>
+<li>Malformed <strong><code>cta</code></strong>, <strong><code>tipConfig</code></strong>, <strong><code>channels</code></strong>, or <strong><code>layout</code></strong> entries should not break the whole profile — prefer omitting a field over sending invalid JSON shapes.</li>
+</ul>
+</div>
 <hr>
 <h3 id="channelstat-object">ChannelStat Object</h3>
 <table>
@@ -1491,12 +1559,12 @@
 </tr>
 <tr>
 <td><code>firstSeenAt</code></td>
-<td><code>string \| null</code></td>
+<td><code>string | null</code></td>
 <td>ISO timestamp of first appearance on this channel</td>
 </tr>
 <tr>
 <td><code>lastSeenAt</code></td>
-<td><code>string \| null</code></td>
+<td><code>string | null</code></td>
 <td>ISO timestamp of last appearance on this channel</td>
 </tr>
 </tbody>
@@ -1539,7 +1607,7 @@
 </tr>
 <tr>
 <td><code>uploadedAt</code></td>
-<td><code>string \| null</code></td>
+<td><code>string | null</code></td>
 <td>ISO upload timestamp</td>
 </tr>
 <tr>
@@ -1559,7 +1627,7 @@
 </tr>
 <tr>
 <td><code>preview</code></td>
-<td><code>string \| null</code></td>
+<td><code>string | null</code></td>
 <td>Preview clip URL</td>
 </tr>
 <tr>
@@ -1574,19 +1642,21 @@
 </tr>
 <tr>
 <td><code>aspectRatio</code></td>
-<td><code>number \| null</code></td>
+<td><code>number | null</code></td>
 <td>Aspect ratio (e.g., 1.78 for 16:9)</td>
 </tr>
 </tbody>
 </table>
 <hr>
-<h3 id="layoutrow-object">LayoutRow Object</h3>
-<p>Describes the ordered sections rendered on the profile page.</p>
+<h3 id="layoutsection-object-layout">LayoutSection object (<code>layout[]</code>)</h3>
+<p>Each entry is one <strong>section</strong> on the profile (order = display order). Only <strong><code>type</code></strong> is required on each object; everything else depends on <code>type</code>.</p>
 <table>
 <thead>
 <tr>
 <th>Field</th>
 <th>Type</th>
+<th>Required</th>
+<th>Applies when <code>type</code> is</th>
 <th>Description</th>
 </tr>
 </thead>
@@ -1594,20 +1664,58 @@
 <tr>
 <td><code>type</code></td>
 <td><code>string</code></td>
-<td><code>"videos"</code> (vertical list) or <strong><code>horizontal</code></strong> (carousel). Legacy <strong><code>horizontal_videos</code></strong> is accepted.</td>
+<td>✅</td>
+<td>all</td>
+<td>Section discriminator. Supported: <strong><code>videos</code></strong> (main vertical grid), <strong><code>horizontal</code></strong> (carousel; legacy <strong><code>horizontal_videos</code></strong> accepted), <strong><code>horizontal_categories</code></strong> (category chips row), <strong><code>media_stacks</code></strong> (stacked grids). Unknown values are <strong>ignored</strong> client-side (section dropped) — do not rely on them for layout.</td>
 </tr>
 <tr>
 <td><code>title</code></td>
-<td><code>string \| null</code></td>
-<td>Section heading</td>
+<td><code>string | null</code></td>
+<td>⚪</td>
+<td>all</td>
+<td>Section heading (e.g. <code>"For You"</code>)</td>
 </tr>
 <tr>
 <td><code>videoIds</code></td>
 <td><code>string[]</code></td>
-<td>Ordered video IDs — only for <strong><code>horizontal</code></strong> / legacy <strong><code>horizontal_videos</code></strong>. Snake_case <strong><code>video_ids</code></strong> is accepted when decoding.</td>
+<td>⚪</td>
+<td><code>horizontal</code></td>
+<td>Curated order for the carousel; omit to use the full profile <code>videos</code> list. Snake_case <strong><code>video_ids</code></strong> accepted.</td>
+</tr>
+<tr>
+<td><code>categoryIds</code></td>
+<td><code>string[]</code></td>
+<td>⚪</td>
+<td><code>horizontal_categories</code></td>
+<td>Which category IDs to show; omit to fall back to uploader <code>channels</code></td>
+</tr>
+<tr>
+<td><code>stackVideoIds</code></td>
+<td><code>string[][]</code></td>
+<td>⚪</td>
+<td><code>media_stacks</code></td>
+<td>Each inner array = one stack’s video IDs. Snake_case <strong><code>stack_video_ids</code></strong> accepted.</td>
+</tr>
+<tr>
+<td><code>stackTitles</code></td>
+<td><code>string[]</code></td>
+<td>⚪</td>
+<td><code>media_stacks</code></td>
+<td>Optional title per stack (same length as <code>stackVideoIds</code> / <code>stack_video_ids</code> when used)</td>
+</tr>
+<tr>
+<td><code>columns</code></td>
+<td><code>number</code></td>
+<td>⚪</td>
+<td><code>media_stacks</code></td>
+<td>Number of columns (e.g. <code>2</code>); string/number accepted</td>
 </tr>
 </tbody>
 </table>
+<div class="admonition info">
+<p class="admonition-title">Layout for most custom APIs</p>
+<p><strong>Omit <code>layout</code> entirely</strong> unless you need a non-default section mix. The app will still show profile videos using its default section template when <code>layout</code> is null/empty/only-unknown types.</p>
+</div>
 <hr>
 <h2 id="error-responses">Error Responses</h2>
 <table>

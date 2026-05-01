@@ -736,6 +736,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#json-key-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSON key names
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1188,6 +1197,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#json-key-names" class="md-nav__link">
+    <span class="md-ellipsis">
+      JSON key names
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1240,7 +1258,11 @@
 <ul>
 <li><strong>Regular Notices</strong>: Low-priority update messages shown on the lockscreen</li>
 <li><strong>Priority Notice</strong>: A single high-priority message that appears on the home page</li>
-</ul></div>
+</ul>
+<h2 id="json-key-names">JSON key names</h2>
+<p>Hot Tub’s iOS client decodes API JSON with a flexible <strong><code>convertFromSnakeCase</code></strong>: keys like <code>video_count</code>, <code>normalized_name</code>, and <code>video_ids</code> map to the same logical fields as <strong><code>videoCount</code></strong>, <strong><code>normalizedName</code></strong>, and <strong><code>videoIds</code></strong> in these docs.</p>
+<p><strong>What to send:</strong> use <strong>one</strong> naming style per payload. <strong>snake_case</strong> (<code>normalized_name</code>) matches most of the examples in the developer docs and is what we recommend moving forward. For improved backward compatibility use <strong>camelCase</strong> (<code>normalizedName</code>). You do <strong>not</strong> need to send both <code>normalized_name</code> and <code>normalizedName</code> — pick the style your server uses consistently.</p>
+<p><strong>camelCase</strong> keys that already match the documented field name (e.g. <code>videoCount</code>) are typically fine, but snake_case avoids ambiguity for multi-word fields.</p></div>
 
 
 

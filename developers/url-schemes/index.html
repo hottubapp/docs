@@ -933,6 +933,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#open-uploader-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open uploader profile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#play-video" class="md-nav__link">
     <span class="md-ellipsis">
       📺 Play Video
@@ -1484,6 +1493,15 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#open-uploader-profile" class="md-nav__link">
+    <span class="md-ellipsis">
+      Open uploader profile
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#play-video" class="md-nav__link">
     <span class="md-ellipsis">
       📺 Play Video
@@ -1713,9 +1731,14 @@
 <h2 id="universal-links-https-handoff">Universal links (HTTPS handoff)</h2>
 <p>For <strong>Safari Web Extension</strong> “open in app” and web fallbacks, Hot Tub uses <strong>Associated Domains</strong> so <code>https://</code> URLs can open the app without relying on a top-level <code>hottub://</code> tap in every case.</p>
 <h3 id="handoff-url-shape">Handoff URL shape</h3>
-<p>Single path <strong><code>/app</code></strong>; action and target page are query parameters:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>https://&lt;host&gt;/app?action=open&amp;url=&lt;encoded https page URL&gt;
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>https://&lt;host&gt;/app?action=favorite&amp;url=&lt;encoded https page URL&gt;
+<p>Single path <strong><code>/app</code></strong>; the <code>action</code> query parameter selects the in-app route.</p>
+<p><strong>Marketing tag and creator pages</strong> (paths <code>/tag/…</code> and <code>/creator/…</code> on the site you hand off from) should use native in-app routes instead of <code>open&amp;url=</code> (which would treat the marketing HTML URL as a playable handoff target):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>https://&lt;host&gt;/app?action=search&amp;q=&lt;decoded tag query&gt;
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>https://&lt;host&gt;/app?action=profile&amp;uploader=&lt;creator path segment&gt;
+</code></pre></div>
+<p><strong>Generic pages</strong> (playback / web handoff) still use the encoded page URL:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>https://&lt;host&gt;/app?action=open&amp;url=&lt;encoded https page URL&gt;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>https://&lt;host&gt;/app?action=favorite&amp;url=&lt;encoded https page URL&gt;
 </code></pre></div>
 <p>The handoff <strong>web page</strong> uses the same HTTPS <code>/app?…</code> URL for its primary button (retry universal link), not <code>hottub://</code>.</p>
 <h3 id="where-it-is-configured">Where it is configured</h3>
@@ -1759,37 +1782,42 @@
 <h2 id="available-url-schemes">Available URL Schemes</h2>
 <h3 id="add-source">📦 Add Source</h3>
 <p>Direct users to add your video source to their Hot Tub app:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>hottub://source?url=https://api.example.com
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>hottub://source?url=https://api.example.com
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Web Redirect Service</p>
 <p>For platforms like Discord or Slack which don't support custom URL schemes, Hot Tub provides a web redirect service.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>https://hottubapp.io/add/{source_url}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>https://hottubapp.io/add/{source_url}
 </code></pre></div>
 <p><strong>Example:</strong>
-</p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>https://hottubapp.io/add/api.example.com
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>https://hottubapp.io/add/api.example.com
 </code></pre></div>
 <p>This automatically redirects to <code>hottub://source?url=https://api.example.com</code> when opened on devices with Hot Tub installed.</p>
 </div>
 <h3 id="open-web-page">🌎 Open Web Page</h3>
 <p>Open a web page within Hot Tub's built-in browser:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>hottub://webview?url=https://example.com/help
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>hottub://webview?url=https://example.com/help
 </code></pre></div>
 <h3 id="trigger-search">🔎 Trigger Search</h3>
 <p>Pre-fill the search field with a query:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>hottub://search?q=nature documentaries
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>hottub://search?q=nature documentaries
 </code></pre></div>
+<h3 id="open-uploader-profile">Open uploader profile</h3>
+<p>Open the in-app uploader profile (by slug segment from <code>/creator/…</code> or opaque <code>u-…</code> id):</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>hottub://profile?uploader=yanks
+</code></pre></div>
+<p>(<code>creator</code> is accepted as an alias for <code>uploader</code>.)</p>
 <h3 id="play-video">📺 Play Video</h3>
 <p>Direct playback of a specific video:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>hottub://play?video=https://example.com/watch/12345
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>hottub://play?video=https://example.com/watch/12345
 </code></pre></div>
 <h3 id="show-notification">🔔 Show Notification</h3>
 <p>Display an in-app toast notification:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>hottub://notification?type=info&amp;title=Welcome&amp;message=Thanks for using our service!
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>hottub://notification?type=info&amp;title=Welcome&amp;message=Thanks for using our service!
 </code></pre></div>
 <h3 id="debug-message">🛠 Debug Message</h3>
 <p>Show content in Hot Tub's debug view for troubleshooting and development:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>hottub://message?content=Configuration loaded: API v2.1, 15 channels active
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>hottub://message?content=Configuration loaded: API v2.1, 15 channels active
 </code></pre></div>
 <hr>
 <h2 id="field-reference">Field Reference</h2>
@@ -1819,7 +1847,7 @@
 </tbody>
 </table>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>hottub://source?url=https://api.myvideosite.com
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>hottub://source?url=https://api.myvideosite.com
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Source Validation</p>
@@ -1852,7 +1880,7 @@
 </tbody>
 </table>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>hottub://webview?url=https://help.example.com
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>hottub://webview?url=https://help.example.com
 </code></pre></div>
 <hr>
 <h3 id="search-scheme">🔎 Search Scheme</h3>
@@ -1875,7 +1903,7 @@
 </tbody>
 </table>
 <p><strong>Example:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>hottub://search?q=funny cats
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>hottub://search?q=funny cats
 </code></pre></div>
 <hr>
 <h3 id="play-scheme">📺 Play Scheme</h3>
@@ -1908,11 +1936,11 @@
 <p>Use <code>video</code> for API-based videos that will fetch full details, or <code>url</code> for web-based video players (opens in webview).</p>
 </div>
 <p><strong>Examples:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a># Opens the video in a native video player
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>hottub://play?video=https://www.youtube.com/watch?v=y0sF5xhGreA
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a># Opens the video in a web view player
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>hottub://play?url=https://www.youtube.com/watch?v=y0sF5xhGreA
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a># Opens the video in a native video player
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>hottub://play?video=https://www.youtube.com/watch?v=y0sF5xhGreA
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a># Opens the video in a web view player
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>hottub://play?url=https://www.youtube.com/watch?v=y0sF5xhGreA
 </code></pre></div>
 <hr>
 <h3 id="notification-scheme">🔔 Notification Scheme</h3>
@@ -1947,8 +1975,8 @@
 </tbody>
 </table>
 <p><strong>Examples:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>hottub://notification?type=success&amp;title=Success&amp;message=Video added to playlist!
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>hottub://notification?type=error&amp;title=Error&amp;message=Failed to load video
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>hottub://notification?type=success&amp;title=Success&amp;message=Video added to playlist!
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>hottub://notification?type=error&amp;title=Error&amp;message=Failed to load video
 </code></pre></div>
 <hr>
 <h3 id="debug-message-scheme">🛠 Debug Message Scheme</h3>
@@ -1979,9 +2007,9 @@
 <li><strong>App diagnostics</strong> - Version info, device details, etc.</li>
 </ul>
 <p><strong>Examples:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>hottub://message?content=Server Status: API v2.1.3, 15 channels active, 1,203 users online
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>hottub://message?content=https://api.example.com/debug/user/12345
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>hottub://message?content=User Config: Premium=true, NSFW=false, Quality=1080p
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>hottub://message?content=Server Status: API v2.1.3, 15 channels active, 1,203 users online
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>hottub://message?content=https://api.example.com/debug/user/12345
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>hottub://message?content=User Config: Premium=true, NSFW=false, Quality=1080p
 </code></pre></div>
 <hr>
 <h2 id="complete-reference">Complete Reference</h2>
@@ -2012,6 +2040,12 @@
 <td><code>hottub://search</code></td>
 <td>Trigger search</td>
 <td><code>q</code></td>
+<td>-</td>
+</tr>
+<tr>
+<td><code>hottub://profile</code></td>
+<td>Open uploader profile</td>
+<td><code>uploader</code> (or <code>creator</code>)</td>
 <td>-</td>
 </tr>
 <tr>
@@ -2113,66 +2147,66 @@
 <h2 id="implementation-examples">Implementation Examples</h2>
 <h3 id="html-integration">HTML Integration</h3>
 <p>Add Hot Tub support to your website:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="cm">&lt;!-- Custom URL Scheme (works on devices with Hot Tub) --&gt;</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"hottub://source?url=https://api.myvideosite.com"</span> <span class="na">class</span><span class="o">=</span><span class="s">"add-to-hottub-btn"</span><span class="p">&gt;</span>
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>  📺 Add to Hot Tub
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>
-<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="cm">&lt;!-- Web Redirect (works everywhere, including Discord) --&gt;</span>
-<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://hottubapp.io/add/api.myvideosite.com"</span> <span class="na">class</span><span class="o">=</span><span class="s">"add-to-hottub-btn-web"</span><span class="p">&gt;</span>
-<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>  📺 Add to Hot Tub
-<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>
-<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="cm">&lt;!-- Play video --&gt;</span>
-<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"hottub://play?video=https://mysite.com/video/123"</span><span class="p">&gt;</span> ▶️ Watch in Hot Tub <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a>
-<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="cm">&lt;!-- Debug info for developers --&gt;</span>
-<a id="__codelineno-16-15" name="__codelineno-16-15" href="#__codelineno-16-15"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"hottub://message?content=API Response: 200 OK, 15 videos returned"</span><span class="p">&gt;</span> 🛠 Debug Info <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="cm">&lt;!-- Custom URL Scheme (works on devices with Hot Tub) --&gt;</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"hottub://source?url=https://api.myvideosite.com"</span> <span class="na">class</span><span class="o">=</span><span class="s">"add-to-hottub-btn"</span><span class="p">&gt;</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>  📺 Add to Hot Tub
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="cm">&lt;!-- Web Redirect (works everywhere, including Discord) --&gt;</span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"https://hottubapp.io/add/api.myvideosite.com"</span> <span class="na">class</span><span class="o">=</span><span class="s">"add-to-hottub-btn-web"</span><span class="p">&gt;</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a>  📺 Add to Hot Tub
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a>
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="cm">&lt;!-- Play video --&gt;</span>
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"hottub://play?video=https://mysite.com/video/123"</span><span class="p">&gt;</span> ▶️ Watch in Hot Tub <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a>
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="cm">&lt;!-- Debug info for developers --&gt;</span>
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">"hottub://message?content=API Response: 200 OK, 15 videos returned"</span><span class="p">&gt;</span> 🛠 Debug Info <span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
 </code></pre></div>
 <h3 id="javascript-integration">JavaScript Integration</h3>
 <p>Trigger different URL schemes from web pages:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="c1">// Show success notification</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="kd">function</span><span class="w"> </span><span class="nx">showNotification</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span><span class="w"> </span><span class="nx">title</span><span class="p">,</span><span class="w"> </span><span class="nx">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`hottub://notification?type=</span><span class="si">${</span><span class="nx">type</span><span class="si">}</span><span class="sb">&amp;title=</span><span class="si">${</span><span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">title</span><span class="p">)</span><span class="si">}</span><span class="sb">&amp;message=</span><span class="si">${</span><span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a><span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">url</span><span class="p">;</span>
-<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="p">}</span>
-<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>
-<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a><span class="c1">// Show debug information</span>
-<a id="__codelineno-17-8" name="__codelineno-17-8" href="#__codelineno-17-8"></a><span class="kd">function</span><span class="w"> </span><span class="nx">showDebugInfo</span><span class="p">(</span><span class="nx">info</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-17-9" name="__codelineno-17-9" href="#__codelineno-17-9"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"hottub://message?content="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">info</span><span class="p">);</span>
-<a id="__codelineno-17-10" name="__codelineno-17-10" href="#__codelineno-17-10"></a><span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">url</span><span class="p">;</span>
-<a id="__codelineno-17-11" name="__codelineno-17-11" href="#__codelineno-17-11"></a><span class="p">}</span>
-<a id="__codelineno-17-12" name="__codelineno-17-12" href="#__codelineno-17-12"></a>
-<a id="__codelineno-17-13" name="__codelineno-17-13" href="#__codelineno-17-13"></a><span class="c1">// Example usage</span>
-<a id="__codelineno-17-14" name="__codelineno-17-14" href="#__codelineno-17-14"></a><span class="nx">showNotification</span><span class="p">(</span><span class="s2">"success"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Success"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Video added to playlist!"</span><span class="p">);</span>
-<a id="__codelineno-17-15" name="__codelineno-17-15" href="#__codelineno-17-15"></a><span class="nx">showDebugInfo</span><span class="p">(</span><span class="s2">"API Status: Connected, Last sync: 2 minutes ago"</span><span class="p">);</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1">// Show success notification</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="kd">function</span><span class="w"> </span><span class="nx">showNotification</span><span class="p">(</span><span class="nx">type</span><span class="p">,</span><span class="w"> </span><span class="nx">title</span><span class="p">,</span><span class="w"> </span><span class="nx">message</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sb">`hottub://notification?type=</span><span class="si">${</span><span class="nx">type</span><span class="si">}</span><span class="sb">&amp;title=</span><span class="si">${</span><span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">title</span><span class="p">)</span><span class="si">}</span><span class="sb">&amp;message=</span><span class="si">${</span><span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">message</span><span class="p">)</span><span class="si">}</span><span class="sb">`</span><span class="p">;</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">url</span><span class="p">;</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="p">}</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="c1">// Show debug information</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="kd">function</span><span class="w"> </span><span class="nx">showDebugInfo</span><span class="p">(</span><span class="nx">info</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">"hottub://message?content="</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">encodeURIComponent</span><span class="p">(</span><span class="nx">info</span><span class="p">);</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="w">  </span><span class="nb">window</span><span class="p">.</span><span class="nx">location</span><span class="p">.</span><span class="nx">href</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">url</span><span class="p">;</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="p">}</span>
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a>
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="c1">// Example usage</span>
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="nx">showNotification</span><span class="p">(</span><span class="s2">"success"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Success"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Video added to playlist!"</span><span class="p">);</span>
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="nx">showDebugInfo</span><span class="p">(</span><span class="s2">"API Status: Connected, Last sync: 2 minutes ago"</span><span class="p">);</span>
 </code></pre></div>
 <h3 id="discordsocial-media-sharing">Discord/Social Media Sharing</h3>
 <p>Use web redirects for platforms that don't support custom schemes:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>Share this link: https://hottubapp.io/add/api.myvideosite.com
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>Share this link: https://hottubapp.io/add/api.myvideosite.com
 </code></pre></div>
 <h3 id="qr-code-integration">QR Code Integration</h3>
 <p>Generate QR codes for easy mobile access:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>hottub://source?url=https://api.myvideosite.com
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>hottub://source?url=https://api.myvideosite.com
 </code></pre></div>
 <h3 id="server-response-integration">Server Response Integration</h3>
 <p>Include URL schemes in your API responses:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="p">{</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="w">  </span><span class="nt">"notices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="w">      </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"info"</span><span class="p">,</span>
-<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="w">      </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Need Help?"</span><span class="p">,</span>
-<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="w">      </span><span class="nt">"details"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visit our help center for assistance."</span><span class="p">,</span>
-<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="w">      </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hottub://webview?url=https://help.example.com"</span>
-<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="w">    </span><span class="p">},</span>
-<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="w">      </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span>
-<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="w">      </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Debug Available"</span><span class="p">,</span>
-<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="w">      </span><span class="nt">"details"</span><span class="p">:</span><span class="w"> </span><span class="s2">"View server configuration details."</span><span class="p">,</span>
-<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="w">      </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hottub://message?content=Server: api.example.com, Version: 2.1.3, Channels: 15"</span>
-<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a><span class="w">  </span><span class="p">]</span>
-<a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="p">{</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="w">  </span><span class="nt">"notices"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="w">      </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"info"</span><span class="p">,</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="w">      </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Need Help?"</span><span class="p">,</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="w">      </span><span class="nt">"details"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Visit our help center for assistance."</span><span class="p">,</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="w">      </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hottub://webview?url=https://help.example.com"</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="w">      </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="p">,</span>
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="w">      </span><span class="nt">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Debug Available"</span><span class="p">,</span>
+<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="w">      </span><span class="nt">"details"</span><span class="p">:</span><span class="w"> </span><span class="s2">"View server configuration details."</span><span class="p">,</span>
+<a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a><span class="w">      </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hottub://message?content=Server: api.example.com, Version: 2.1.3, Channels: 15"</span>
+<a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a><span class="p">}</span>
 </code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Best Practices</p>
