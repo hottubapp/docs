@@ -21,7 +21,7 @@ function injectContentRestrictionsVideo() {
             '<li>Then try opening or installing Hot Tub again \u2014 it should work</li>' +
           '</ol>' +
           '<div style="margin-top:0.9rem;">' +
-            '<a href="https://www.icloud.com/shortcuts/a53a90c1a9f245dab698d9eba0e66ee5" class="cr-shortcut-link" target="_blank" rel="noopener" style="display:block; text-decoration:none;">' +
+            '<a href="https://www.icloud.com/shortcuts/26dfff16f9b342eaa492412df36daf97" class="cr-shortcut-link" target="_blank" rel="noopener" style="display:block; text-decoration:none;">' +
               '<div style="background:#4f8dff; border-radius:24px; padding:0.8rem 0.9rem 0.95rem; color:#fff; max-width:250px; min-height:125px;">' +
                 '<div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.45rem;">' +
                   '<img src="https://api.iconify.design/material-symbols/settings-rounded.svg?color=%23ffffff" alt="" width="30" height="30" style="display:block;" aria-hidden="true" />' +
