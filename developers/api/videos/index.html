@@ -1389,6 +1389,10 @@
 </div>
 <hr>
 <h3 id="response">Response</h3>
+<div class="admonition info">
+<p class="admonition-title">Home browse mixed <code>items</code></p>
+<p>For <strong>Home</strong> (browse) responses, <code>items</code> may contain <strong>featured rows</strong> (horizontal rails and <strong>inline 2×2 Tapes grids</strong>) interleaved with normal leaf videos. Those rows use a different JSON shape than leaf tiles (no top-level <code>url</code> on the row object). See <a href="../page-layout-rows/">Page layout rows</a> for the full contract, layout <code>type</code> values, and examples.</p>
+</div>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">"pageInfo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">"hasNextPage"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>

@@ -1505,13 +1505,19 @@
 <td><code>layout</code></td>
 <td><code>LayoutSection[] | null</code></td>
 <td>⚪</td>
-<td>Ordered profile sections; unknown <code>type</code> values are ignored client-side</td>
+<td>Ordered profile sections when <strong>not</strong> using <code>items</code> (below); unknown <code>type</code> values are ignored client-side</td>
+</tr>
+<tr>
+<td><code>items</code></td>
+<td><code>mixed[] | null</code></td>
+<td>⚪</td>
+<td>Optional <strong>browse-style</strong> feed: same polymorphic row contract as <a href="browse-feed-rows.md">Browse feed rows</a> (<code>POST /api/videos</code> <code>items</code>) — leaf videos (top-level <code>url</code>) and featured rows (<code>type</code> + nested <code>items</code>, no top-level <code>url</code>). When present and every row decodes successfully, the iOS <strong>Videos</strong> tab uses <strong><code>items</code> order</strong> for section composition and <strong>ignores <code>layout</code></strong> for that tab (see precedence below).</td>
 </tr>
 <tr>
 <td><code>videos</code></td>
 <td><code>VideoRef[] | null</code></td>
 <td>⚪</td>
-<td>Present when <code>profileContent</code> is <code>true</code></td>
+<td>Present when <code>profileContent</code> is <code>true</code>. Pool for resolving ids; merged with clips embedded in <code>items</code> when both are sent.</td>
 </tr>
 <tr>
 <td><code>tapes</code></td>
@@ -1666,7 +1672,7 @@
 <td><code>string</code></td>
 <td>✅</td>
 <td>all</td>
-<td>Section discriminator. Supported: <strong><code>videos</code></strong> (main vertical grid), <strong><code>horizontal</code></strong> (carousel; legacy <strong><code>horizontal_videos</code></strong> accepted), <strong><code>horizontal_categories</code></strong> (category chips row), <strong><code>media_stacks</code></strong> (stacked grids). Unknown values are <strong>ignored</strong> client-side (section dropped) — do not rely on them for layout.</td>
+<td>Section discriminator. Decoded kinds include <strong><code>videos</code></strong>, <strong><code>horizontal</code></strong> (carousel; legacy <strong><code>horizontal_videos</code></strong>), <strong><code>horizontal_categories</code></strong>, <strong><code>media_stacks</code></strong>, and unknown strings (stored internally then dropped from render lists). <strong>Profile → Videos tab:</strong> only <strong><code>horizontal</code></strong> and <strong><code>videos</code></strong> sections are composed; other kinds are <strong>ignored</strong> on that tab (see <a href="browse-feed-rows.md#uploader-profile-a-separate-layout-api">Browse feed rows</a>). Unknown <code>type</code> values never break profile decode.</td>
 </tr>
 <tr>
 <td><code>title</code></td>
@@ -1714,7 +1720,19 @@
 </table>
 <div class="admonition info">
 <p class="admonition-title">Layout for most custom APIs</p>
-<p><strong>Omit <code>layout</code> entirely</strong> unless you need a non-default section mix. The app will still show profile videos using its default section template when <code>layout</code> is null/empty/only-unknown types.</p>
+<p><strong>Omit <code>layout</code> entirely</strong> unless you need a non-default section mix. The app will still show profile videos using its default section template when <code>layout</code> is null/empty, when every entry is an unsupported <code>type</code>, or when the only entries are kinds <strong>not</strong> used on the Videos tab (<code>horizontal_categories</code>, <code>media_stacks</code>, etc.).</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title"><code>items</code> vs <code>layout</code> precedence (iOS)</p>
+<ul>
+<li><strong><code>items</code> wins</strong> when it is a <strong>non-empty array</strong> and <strong>every</strong> element decodes as a valid browse row (leaf video or featured section). The client then builds the Videos tab from that order (waterfall segments, <code>rail</code>, <code>grid</code>) and <strong>does not</strong> use <code>layout</code> for section composition on that tab.</li>
+<li>If <strong><code>items</code> is absent, empty, or any element fails to decode</strong>, the client uses <strong><code>layout</code></strong> + <strong><code>videos</code></strong> exactly as before (backward compatible).</li>
+<li>Send <strong><code>videos</code></strong> (and/or leaf rows inside <code>items</code>) so every referenced id exists in the merged pool the UI resolves via <code>getVideo(by:)</code>.</li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Legacy profile layout</p>
+<p>Older integrations that only send <strong><code>layout</code></strong> + <strong><code>videos</code></strong> keep working unchanged. New integrations can migrate toward the <strong><code>items</code></strong> signature shared with <a href="browse-feed-rows.md">Browse feed rows</a>.</p>
 </div>
 <hr>
 <h2 id="error-responses">Error Responses</h2>

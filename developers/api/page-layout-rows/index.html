@@ -1,0 +1,1490 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://docs.hottubapp.io/developers/api/page-layout-rows/">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.22">
+    
+    
+      
+        <title>Page layout rows - Hot Tub Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.84d31ad4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Montserrat";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+<script id="__analytics">function __md_analytics(){function e(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],e("js",new Date),e("config","G-FKHVJYKHGB"),document.addEventListener("DOMContentLoaded",(function(){document.forms.search&&document.forms.search.query.addEventListener("blur",(function(){this.value&&e("event","search",{search_term:this.value})}));document$.subscribe((function(){var t=document.forms.feedback;if(void 0!==t)for(var a of t.querySelectorAll("[type=submit]"))a.addEventListener("click",(function(a){a.preventDefault();var n=document.location.pathname,d=this.getAttribute("data-md-value");e("event","feedback",{page:n,data:d}),t.firstElementChild.disabled=!0;var r=t.querySelector(".md-feedback__note [data-md-value='"+d+"']");r&&(r.hidden=!1)})),t.hidden=!1})),location$.subscribe((function(t){e("config","G-FKHVJYKHGB",{page_path:t.pathname})}))}));var t=document.createElement("script");t.async=!0,t.src="https://www.googletagmanager.com/gtag/js?id=G-FKHVJYKHGB",document.getElementById("__analytics").insertAdjacentElement("afterEnd",t)}</script>
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Hot Tub Docs" class="md-header__button md-logo" aria-label="Hot Tub Docs" data-md-component="logo">
+      
+  <img src="../../../assets/icon-round.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Hot Tub Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Page layout rows
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="white"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../../developers/api/page-layout-rows/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=fr" hreflang="fr" class="md-select__link">
+              French
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=de" hreflang="de" class="md-select__link">
+              German
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=es" hreflang="es" class="md-select__link">
+              Spanish
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=it" hreflang="it" class="md-select__link">
+              Italian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=nl" hreflang="nl" class="md-select__link">
+              Dutch
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=pt" hreflang="pt" class="md-select__link">
+              Portuguese
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=pl" hreflang="pl" class="md-select__link">
+              Polish
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=tr" hreflang="tr" class="md-select__link">
+              Turkish
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=zh" hreflang="zh" class="md-select__link">
+              Chinese
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=ja" hreflang="ja" class="md-select__link">
+              Japanese
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=de" hreflang="at" class="md-select__link">
+              Austrian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=nl" hreflang="be" class="md-select__link">
+              Belgian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=bg" hreflang="bg" class="md-select__link">
+              Bulgarian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=hr" hreflang="hr" class="md-select__link">
+              Croatian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=el" hreflang="cy" class="md-select__link">
+              Cypriot
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=cs" hreflang="cs" class="md-select__link">
+              Czech
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=da" hreflang="da" class="md-select__link">
+              Danish
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=et" hreflang="et" class="md-select__link">
+              Estonian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=fi" hreflang="fi" class="md-select__link">
+              Finnish
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=el" hreflang="el" class="md-select__link">
+              Greek
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=hu" hreflang="hu" class="md-select__link">
+              Hungarian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=ga" hreflang="ga" class="md-select__link">
+              Irish
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=lv" hreflang="lv" class="md-select__link">
+              Latvian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=lt" hreflang="lt" class="md-select__link">
+              Lithuanian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=lb" hreflang="lb" class="md-select__link">
+              Luxembourgish
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=mt" hreflang="mt" class="md-select__link">
+              Maltese
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=ro" hreflang="ro" class="md-select__link">
+              Romanian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=sk" hreflang="sk" class="md-select__link">
+              Slovak
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=sl" hreflang="sl" class="md-select__link">
+              Slovenian
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="https://docs-hottubapp-io.translate.goog/developers/api/page-layout-rows/?_x_tr_sl=en&_x_tr_tl=sv" hreflang="sv" class="md-select__link">
+              Swedish
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Hot Tub Docs" class="md-nav__button md-logo" aria-label="Hot Tub Docs" data-md-component="logo">
+      
+  <img src="../../../assets/icon-round.png" alt="logo">
+
+    </a>
+    Hot Tub Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🏡 Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../install/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📲 Install
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../safari-extension/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🧩 Safari extension
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🚀 Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../advanced-settings/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🪛 Settings
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../faq/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ❓ FAQ
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Developers
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Developers
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../server/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📦 Server
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_7_2" id="__nav_7_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    🌐 Endpoints
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_2">
+            <span class="md-nav__icon md-icon"></span>
+            🌐 Endpoints
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../status/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📡 Status
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../videos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🎬 Videos
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../uploaders/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    👤 Uploaders
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../url-schemes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🔗 URL Schemes
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../developer-tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🐛 Developer Tools
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+        
+        
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    About Us
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            About Us
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/info/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    ℹ️ Info
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/contact/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📇 Contact Us
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/press-kit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📰 Press Kit
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/legal/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    📄 Terms & Privacy Policy
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../about/partners/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    🤝 Partner with Hot Tub
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#featured-row-object" class="md-nav__link">
+    <span class="md-ellipsis">
+      Featured row object
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Featured row object">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#layout-type" class="md-nav__link">
+    <span class="md-ellipsis">
+      Layout type
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#horizontal-rail-variants-tapes-portrait-chrome" class="md-nav__link">
+    <span class="md-ellipsis">
+      Horizontal rail variants (Tapes portrait chrome)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inline-22-grid-behavior" class="md-nav__link">
+    <span class="md-ellipsis">
+      Inline 2×2 grid behavior
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-mixed-items" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example mixed items
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#related" class="md-nav__link">
+    <span class="md-ellipsis">
+      Related
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+  <h1>Page layout rows</h1>
+
+<div><h2 id="overview">Overview</h2>
+<p>On <strong>Home</strong> (browse), <code>POST /api/videos</code> returns an <code>items</code> array that can mix two shapes:</p>
+<ol>
+<li><strong>Leaf videos</strong> — normal grid cells in the main waterfall. Each object looks like a full <a href="../videos/#video-object-fields">video</a> row and <strong>must</strong> include a top-level <strong><code>url</code></strong> (watch page / permalink), same as the rest of the videos API.</li>
+<li><strong>Featured rows</strong> — server-driven blocks with their own header and a nested <strong><code>items</code></strong> array of videos. These render as <strong>horizontal rails</strong> or an <strong>inline 2×2 Tapes-style grid</strong>, not as single waterfall tiles.</li>
+</ol>
+<p>The iOS client tells them apart by shape: a featured row has <strong><code>type</code></strong>, <strong><code>items</code></strong>, and <strong>no</strong> top-level <strong><code>url</code></strong>. If <code>type</code>, <code>items</code>, and <code>url</code> are all present at the top level, the object is treated as a leaf video, not a featured row.</p>
+<div class="admonition tip">
+<p class="admonition-title">JSON key names</p>
+<p>Keys can be <strong>snake_case</strong> or <strong>camelCase</strong>; the app uses flexible decoding. See <a href="../../server/#json-key-names">JSON key names</a>.</p>
+</div>
+<hr>
+<h2 id="featured-row-object">Featured row object</h2>
+<p>Featured rows mirror the app’s <code>FeaturedSection</code> model.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Type</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>id</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Stable id for the row (diffing / analytics).</td>
+</tr>
+<tr>
+<td><code>title</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Section header shown in the UI.</td>
+</tr>
+<tr>
+<td><code>type</code></td>
+<td><code>string</code></td>
+<td>Yes</td>
+<td>Layout bucket; see <a href="#layout-type">Layout <code>type</code></a> below.</td>
+</tr>
+<tr>
+<td><code>items</code></td>
+<td><code>video[]</code></td>
+<td>Yes</td>
+<td>Ordered clips for this row. Each entry uses the same video fields as leaf items (including nested <code>url</code>).</td>
+</tr>
+<tr>
+<td><code>system_symbol</code></td>
+<td><code>string</code></td>
+<td>No</td>
+<td>SF Symbol name for the section header (e.g. <code>person</code>, <code>square.grid.2x2</code>, <code>film.stack.fill</code>).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="layout-type">Layout <code>type</code></h3>
+<p>The client maps JSON <code>type</code> into exactly two layout buckets:</p>
+<table>
+<thead>
+<tr>
+<th><code>type</code> value</th>
+<th>Layout bucket</th>
+<th>Home UI</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>grid</code></strong></td>
+<td>Grid</td>
+<td><strong>Inline 2×2 Tapes grid</strong> — four portrait-style tiles in a block; users can open a full-screen Tapes flow seeded with <strong>all</strong> nested video ids (not only the four on screen).</td>
+</tr>
+<tr>
+<td><strong>Anything else</strong></td>
+<td>Rail</td>
+<td><strong>Horizontal videos rail</strong> — sideways-scrolling strip of video cards (same rail pipeline as topic/creator-style rows).</td>
+</tr>
+</tbody>
+</table>
+<!-- Legacy or semantic strings (`creator`, `topic`, `tapes`, `rail`, …) are preserved for analytics and header defaults, but **only** the literal string **`grid`** selects the inline grid. All other values behave as a **rail**. -->
+
+<h3 id="horizontal-rail-variants-tapes-portrait-chrome">Horizontal rail variants (Tapes portrait chrome)</h3>
+<p>For <strong><code>type</code></strong> other than <code>grid</code>, the app still chooses <strong>card chrome</strong>:</p>
+<ul>
+<li><strong>Standard rail</strong> — landscape-style cards when clips look like normal browse tiles.</li>
+<li><strong>Tapes-style portrait rail</strong> — taller “shorts” cards when any of the following is true:</li>
+<li><code>type</code> is <code>tapes</code>, or</li>
+<li><code>system_symbol</code> suggests a film-stack symbol (e.g. contains <code>film.stack</code>), or</li>
+<li>several of the first clips look like <strong>portrait, short</strong> items (the app uses <strong><code>aspect_ratio</code></strong> / <strong><code>aspectRatio</code></strong> and <strong>duration</strong> heuristics when symbols are absent).</li>
+</ul>
+<p>Per-video <strong><code>system_image</code></strong> / <strong><code>systemImage</code></strong> on nested items can also contribute to Tapes-style detection.</p>
+<p>Rails that use Tapes-style layout open to the full-screen Tapes experience on tap, similar to the dedicated Tapes entry points in the app.</p>
+<hr>
+<h2 id="inline-22-grid-behavior">Inline 2×2 grid behavior</h2>
+<p>When the row is a <strong><code>grid</code></strong>:</p>
+<ul>
+<li>The UI shows <strong>up to four</strong> tiles from the start of <code>items</code> (2×2). Additional ids in <code>items</code> are still loaded and used when the user opens the full Tapes-style feed from the block.</li>
+<li>Nested videos should be <strong>portrait-first short clips</strong> for best results (same intent as the first-party Tapes catalog: strong thumbnails and consistent aspect ratio).</li>
+<li><strong><code>system_symbol</code></strong> on the row overrides the default grid header icon when non-empty.</li>
+</ul>
+<p>Muted <strong>rotating previews</strong> on those tiles follow the user’s in-app <strong>auto preview</strong> setting; that behavior is not controlled from the API.</p>
+<hr>
+<h2 id="example-mixed-items">Example mixed <code>items</code></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">"pageInfo"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"hasNextPage"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"leaf-1"</span><span class="p">,</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">      </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"First waterfall video"</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">      </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/watch?v=leaf1"</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">      </span><span class="nt">"duration"</span><span class="p">:</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">      </span><span class="nt">"thumb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/thumb1.jpg"</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"leaf-2"</span><span class="p">,</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">      </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Second waterfall video"</span><span class="p">,</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">      </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/watch?v=leaf2"</span><span class="p">,</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">      </span><span class="nt">"duration"</span><span class="p">:</span><span class="w"> </span><span class="mi">120</span><span class="p">,</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">      </span><span class="nt">"thumb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/thumb2.jpg"</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"creators-rail"</span><span class="p">,</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">      </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Creators"</span><span class="p">,</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"rail"</span><span class="p">,</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">      </span><span class="nt">"system_symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"person"</span><span class="p">,</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="w">      </span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="w">          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"c1"</span><span class="p">,</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">          </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"From creator A"</span><span class="p">,</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="w">          </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/watch?v=c1"</span><span class="p">,</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">          </span><span class="nt">"duration"</span><span class="p">:</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">          </span><span class="nt">"thumb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/c1.jpg"</span><span class="p">,</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">          </span><span class="nt">"uploader"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Creator A"</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">      </span><span class="p">]</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"tapes-spotlight"</span><span class="p">,</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">      </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tapes"</span><span class="p">,</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">      </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"grid"</span><span class="p">,</span>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">      </span><span class="nt">"system_symbol"</span><span class="p">:</span><span class="w"> </span><span class="s2">"square.grid.2x2"</span><span class="p">,</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="w">      </span><span class="nt">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="w">          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"s1"</span><span class="p">,</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">          </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Short 1"</span><span class="p">,</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="w">          </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/watch?v=s1"</span><span class="p">,</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">          </span><span class="nt">"duration"</span><span class="p">:</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="w">          </span><span class="nt">"aspect_ratio"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.56</span><span class="p">,</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="w">          </span><span class="nt">"thumb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/s1.jpg"</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="w">          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"s2"</span><span class="p">,</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="w">          </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Short 2"</span><span class="p">,</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="w">          </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/watch?v=s2"</span><span class="p">,</span>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="w">          </span><span class="nt">"duration"</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="w">          </span><span class="nt">"aspect_ratio"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.56</span><span class="p">,</span>
+<a id="__codelineno-0-54" name="__codelineno-0-54" href="#__codelineno-0-54"></a><span class="w">          </span><span class="nt">"thumb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/s2.jpg"</span>
+<a id="__codelineno-0-55" name="__codelineno-0-55" href="#__codelineno-0-55"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-0-56" name="__codelineno-0-56" href="#__codelineno-0-56"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-0-57" name="__codelineno-0-57" href="#__codelineno-0-57"></a><span class="w">          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"s3"</span><span class="p">,</span>
+<a id="__codelineno-0-58" name="__codelineno-0-58" href="#__codelineno-0-58"></a><span class="w">          </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Short 3"</span><span class="p">,</span>
+<a id="__codelineno-0-59" name="__codelineno-0-59" href="#__codelineno-0-59"></a><span class="w">          </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/watch?v=s3"</span><span class="p">,</span>
+<a id="__codelineno-0-60" name="__codelineno-0-60" href="#__codelineno-0-60"></a><span class="w">          </span><span class="nt">"duration"</span><span class="p">:</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span>
+<a id="__codelineno-0-61" name="__codelineno-0-61" href="#__codelineno-0-61"></a><span class="w">          </span><span class="nt">"aspect_ratio"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.56</span><span class="p">,</span>
+<a id="__codelineno-0-62" name="__codelineno-0-62" href="#__codelineno-0-62"></a><span class="w">          </span><span class="nt">"thumb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/s3.jpg"</span>
+<a id="__codelineno-0-63" name="__codelineno-0-63" href="#__codelineno-0-63"></a><span class="w">        </span><span class="p">},</span>
+<a id="__codelineno-0-64" name="__codelineno-0-64" href="#__codelineno-0-64"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-0-65" name="__codelineno-0-65" href="#__codelineno-0-65"></a><span class="w">          </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"s4"</span><span class="p">,</span>
+<a id="__codelineno-0-66" name="__codelineno-0-66" href="#__codelineno-0-66"></a><span class="w">          </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Short 4"</span><span class="p">,</span>
+<a id="__codelineno-0-67" name="__codelineno-0-67" href="#__codelineno-0-67"></a><span class="w">          </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/watch?v=s4"</span><span class="p">,</span>
+<a id="__codelineno-0-68" name="__codelineno-0-68" href="#__codelineno-0-68"></a><span class="w">          </span><span class="nt">"duration"</span><span class="p">:</span><span class="w"> </span><span class="mi">55</span><span class="p">,</span>
+<a id="__codelineno-0-69" name="__codelineno-0-69" href="#__codelineno-0-69"></a><span class="w">          </span><span class="nt">"aspect_ratio"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.56</span><span class="p">,</span>
+<a id="__codelineno-0-70" name="__codelineno-0-70" href="#__codelineno-0-70"></a><span class="w">          </span><span class="nt">"thumb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/s4.jpg"</span>
+<a id="__codelineno-0-71" name="__codelineno-0-71" href="#__codelineno-0-71"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-0-72" name="__codelineno-0-72" href="#__codelineno-0-72"></a><span class="w">      </span><span class="p">]</span>
+<a id="__codelineno-0-73" name="__codelineno-0-73" href="#__codelineno-0-73"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-0-74" name="__codelineno-0-74" href="#__codelineno-0-74"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-0-75" name="__codelineno-0-75" href="#__codelineno-0-75"></a><span class="w">      </span><span class="nt">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"leaf-3"</span><span class="p">,</span>
+<a id="__codelineno-0-76" name="__codelineno-0-76" href="#__codelineno-0-76"></a><span class="w">      </span><span class="nt">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Continues waterfall"</span><span class="p">,</span>
+<a id="__codelineno-0-77" name="__codelineno-0-77" href="#__codelineno-0-77"></a><span class="w">      </span><span class="nt">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/watch?v=leaf3"</span><span class="p">,</span>
+<a id="__codelineno-0-78" name="__codelineno-0-78" href="#__codelineno-0-78"></a><span class="w">      </span><span class="nt">"duration"</span><span class="p">:</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span>
+<a id="__codelineno-0-79" name="__codelineno-0-79" href="#__codelineno-0-79"></a><span class="w">      </span><span class="nt">"thumb"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://example.com/thumb3.jpg"</span>
+<a id="__codelineno-0-80" name="__codelineno-0-80" href="#__codelineno-0-80"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-0-81" name="__codelineno-0-81" href="#__codelineno-0-81"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-0-82" name="__codelineno-0-82" href="#__codelineno-0-82"></a><span class="p">}</span>
+</code></pre></div>
+<hr>
+<!-- ## Uploader profile: a separate layout API
+
+The **profile → Videos** tab supports **two** ways to describe sections (see [Uploaders — `items` vs `layout`](uploaders.md#items-vs-layout-precedence-ios)):
+
+1. **Preferred (browse-aligned):** optional **`items`** on `POST /api/uploaders` — **same polymorphic row contract** as this document ([leaf vs featured](#overview)). When `items` is non-empty and fully decodable, the client builds rails, inline **`grid`** blocks, and waterfall segments from **that order** and **ignores `layout`** for the Videos tab.
+2. **Legacy:** **`layout`** plus top-level **`videos`** — [`LayoutSection` objects](uploaders.md#layoutsection-object-layout) with `horizontal` / `videos` kinds (see [Uploaders field reference](uploaders.md#layoutsection-object-layout)).
+
+| Topic | Browse (`POST /api/videos` `items`) | Profile (`POST /api/uploaders`) |
+| ----- | ----------------------------------- | ------------------------------- |
+| Endpoint | `/api/videos` | `/api/uploaders` with `profileContent: true` |
+| Primary feed shape | Polymorphic **`items`** | Same **`items`** when provided; else **`layout`** + **`videos`** |
+| Horizontal row `type` | Any string except **`grid`** → rail bucket; semantics affect Tapes-style chrome | **`items` path:** same as browse. **`layout` path:** **`horizontal`** / **`horizontal_videos`** only for the Videos tab |
+| Inline 2×2 grid | `"type": "grid"` | Supported on the **`items`** path; **not** on the legacy-only `layout` path |
+
+When using **`items`**, keep sending **`videos`** (and/or leaf entries in `items`) so every referenced clip exists in the merged pool the UI resolves. -->
+
+<hr>
+<h2 id="related">Related</h2>
+<ul>
+<li>Full request/response fields for <code>POST /api/videos</code>: <a href="../videos/">Videos endpoint</a></li>
+<li>Uploader profile and <code>layout</code>: <a href="../uploaders/">Uploaders endpoint</a></li>
+<li>Naming conventions: <a href="../../server/#json-key-names">Server overview — JSON key names</a></li>
+</ul></div>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  <form class="md-feedback" name="feedback" hidden>
+    <fieldset>
+      <legend class="md-feedback__title">
+        Was this page helpful?
+      </legend>
+      <div class="md-feedback__inner">
+        <div class="md-feedback__list">
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page was helpful" data-md-value="1">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m7 0c0 .8-.7 1.5-1.5 1.5S14 10.3 14 9.5 14.7 8 15.5 8s1.5.7 1.5 1.5m-5 7.73c-1.75 0-3.29-.73-4.19-1.81L9.23 14c.45.72 1.52 1.23 2.77 1.23s2.32-.51 2.77-1.23l1.42 1.42c-.9 1.08-2.44 1.81-4.19 1.81"/></svg>
+            </button>
+          
+            <button class="md-feedback__icon md-icon" type="submit" title="This page could be improved" data-md-value="0">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 12a8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8 8 8 0 0 0 8-8m2 0a10 10 0 0 1-10 10A10 10 0 0 1 2 12 10 10 0 0 1 12 2a10 10 0 0 1 10 10m-6.5-4c.8 0 1.5.7 1.5 1.5s-.7 1.5-1.5 1.5-1.5-.7-1.5-1.5.7-1.5 1.5-1.5M10 9.5c0 .8-.7 1.5-1.5 1.5S7 10.3 7 9.5 7.7 8 8.5 8s1.5.7 1.5 1.5m2 4.5c1.75 0 3.29.72 4.19 1.81l-1.42 1.42C14.32 16.5 13.25 16 12 16s-2.32.5-2.77 1.23l-1.42-1.42C8.71 14.72 10.25 14 12 14"/></svg>
+            </button>
+          
+        </div>
+        <div class="md-feedback__note">
+          
+            <div data-md-value="1" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback!
+            </div>
+          
+            <div data-md-value="0" hidden>
+              
+              
+                
+              
+              
+              
+                
+                
+              
+              Thanks for your feedback! Help us improve this page by
+            </div>
+          
+        </div>
+      </div>
+    </fieldset>
+  </form>
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
+<footer class="site-footer" style="background-color: rgba(0, 0, 0, 0.5); width: 100%">
+  <div
+    class="footer-content"
+    style="
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    "
+  >
+    <div
+      class="footer-brand"
+      style="display: flex; flex-direction: row; align-items: center; gap: 10px"
+    >
+      <a href="https://reddoorendeavors.com">
+        <img
+          src="https://docs.hottubapp.io/assets/logo.png"
+          alt="Red Door Endeavors"
+          style="height: 50px; padding-top: 10px; padding-bottom: 10px"
+        />
+      </a>
+      <div class="footer-copyright">© 2024 Red Door Endeavors, Inc. All rights reserved.</div>
+    </div>
+    <div class="footer-nav">
+      <!-- Uncomment the following lines to display the links -->
+      <!-- <a href="https://docs.hottubapp.io/products">Products</a>
+      <a href="https://docs.hottubapp.io/about">About</a>
+      <a href="https://docs.hottubapp.io/contact">Contact</a> -->
+      <div class="social-links" style="display: flex; gap: 12px">
+        <a href="https://github.com/hottubapp" class="social-link">
+          <i class="fa-brands fa-github" style="color: white; font-size: 20px"></i>
+        </a>
+        <a href="https://hottubapp.io/discord" class="social-link">
+          <i class="fab fa-discord" style="color: white; font-size: 20px"></i>
+        </a>
+        <a href="mailto:support@hottubapp.io" class="social-link">
+          <i class="fas fa-envelope" style="color: white; font-size: 20px"></i>
+        </a>
+        <a href="https://patreon.com/c1d3rdev" class="social-link">
+          <i class="fa-brands fa-patreon" style="color: white; font-size: 20px"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.top", "search.suggest", "search.highlight", "toc.follow", "navigation.search", "navigation.sticky"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+        <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+      
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+      
+        <script src="https://unpkg.com/three@0.157.0/build/three.min.js"></script>
+      
+        <script src="../../../assets/process-polyfill.js"></script>
+      
+        <script src="../../../assets/content-restrictions-video.js"></script>
+      
+        <script src="../../../assets/contact-reps.js"></script>
+      
+        <script src="../../../assets/home-feature-cards.js"></script>
+      
+        <script src="../../../assets/demo-3d.bundle.js"></script>
+      
+        <script src="../../../assets/bubble-background.js"></script>
+      
+    
+  </body>
+</html>
